@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script src="script.js" defer></script>
+    <title>Willify</title>
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor outer"></div>
+    <div class="cursor inner"></div>
+
     <!-- Header -->
     <header>
         <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Songs</li>
-            <li>Songs Detail</li>
-            <li>Register</li>
+            <li class="link">Home</li>
+            <li class="link">About Us</li>
+            <li class="link">Songs</li>
+            <li class="link">Songs Detail</li>
+            <li class="link">Register</li>
         </ul>
     </header>
 
@@ -22,22 +27,22 @@
     <main>
         <div class="hero-section">
             <h1>Willify</h1>
-            <h3>The most advanced song platform ever!</h3>
-            <button id="read-more-button">Read More</button>
+            <h3>Where Music Meets Comfort</h3>
+            <button id="read-more-button" class="link">Read More</button>
         </div>
 
         <div class="feature-container">
             <h1>Why Choose Willify?</h1>
             <div class="feature-card-container">
-                <div class="feature-card">
+                <div class="feature-card link" id="card-one">
                     <h1>More than 100.000+ Songs to Play</h1>
                     <p>Willify offers a wide variety of song choices to played</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card link" id="card-two">
                     <h1>948.412 Active Users Daily</h1>
                     <p>User's Comfortability is Willify's 1<sup>st</sup> Priority so they can play songs easily</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card link" id="card-three">
                     <h1>Fresh Songs Everyday</h1>
                     <p>Songs in Willify always gets updated by the time its releases</p>
                 </div>
