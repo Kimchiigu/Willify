@@ -43,7 +43,7 @@ body {
     background-color: rgb(42, 42, 42);
     flex-direction: column;
     cursor: none;
-    background-image: url('/assets/background-image-full.png');
+    background-image: url('/assets/home/background/background-image-full.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -61,6 +61,7 @@ header {
     margin-top: 0.8rem;
     backdrop-filter: blur(10px);
     z-index: 2;
+    color: white;
 
     ul {
         a {
@@ -83,6 +84,7 @@ header {
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             background-color: rgba(244, 244, 244, 0.812);
             font-size: 23px;
+            color: #202020;
         }
     }
 }
@@ -96,9 +98,6 @@ header {
     color: aliceblue;
     margin-bottom: 10rem;
     margin-top: 5rem;
-    /* background-image: url('/assets/background-image.png'); */
-    background-repeat: no-repeat;
-    background-size: cover;
 
     h1 {
         font-size: 200px;
@@ -190,19 +189,19 @@ header {
         }
 
         #card-one {
-            background-image: url('/assets/card-1.png');
+            background-image: url('/assets/home/feature-card/card-1.png');
             background-repeat: no-repeat;
             background-size: cover;
         }
 
         #card-two {
-            background-image: url('/assets/card-2.png');
+            background-image: url('/assets/home/feature-card/card-2.png');
             background-repeat: no-repeat;
             background-size: cover;
         }
 
         #card-three {
-            background-image: url('/assets/card-3.png');
+            background-image: url('/assets/home/feature-card/card-3.png');
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -271,21 +270,21 @@ header {
             }
 
             #review-one {
-                background-image: url('/assets/review-background-1.png');
+                background-image: url('/assets/home/review-card/review-background-1.png');
                 background-size: cover;
                 background-repeat: no-repeat;
                 border-radius: 0px 10px 10px 0;
             }
 
             #review-two {
-                background-image: url('/assets/review-background-2.png');
+                background-image: url('/assets/home/review-card/review-background-2.png');
                 background-size: cover;
                 background-repeat: no-repeat;
                 border-radius: 0px 10px 10px 0;
             }
 
             #review-three {
-                background-image: url('/assets/review-background-3.png');
+                background-image: url('/assets/home/review-card/review-background-3.png');
                 background-size: cover;
                 background-repeat: no-repeat;
                 border-radius: 0px 10px 10px 0;
@@ -306,7 +305,8 @@ footer {
     flex-direction: column;
     color: aliceblue;
     width: 100%;
-    background-image: url('/assets/background-image.png');
+    background-image: url('/assets/home/background/background-image.png');
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -317,6 +317,7 @@ footer {
         flex-direction: column;
         width: 100%;
         backdrop-filter: blur(10px);
+        padding: 2rem 0;
 
         .footer-above {
             display: flex;
@@ -332,6 +333,24 @@ footer {
             .footer-right-container {
                 width: 50%;
                 /* background-color: blueviolet; */
+
+                p {
+                    border-radius: 30px;
+                    padding: 0.5rem 2rem;
+                    transition: all 0.4s;
+                }
+
+                p:hover {
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    background-color: rgba(244, 244, 244, 0.812);
+                    color: #202020;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                    cursor: none;
+                }
             }
         }
 
