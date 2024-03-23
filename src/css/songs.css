@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(42, 42, 42);
+    flex-direction: column;
+    cursor: none;
+    background-image: url('/assets/songs/background/songs-background-image.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: aliceblue;
+    margin-bottom: 10rem;
+    margin-top: 5rem;
+
+    h1 {
+        font-size: 200px;
+        font-weight: bolder;
+        margin-bottom: -40px;
+    }
+
+    h3 {
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    #read-more-button {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        background-color: white;
+        border-radius: 10px;
+        border-style: none;
+        padding: 1rem 3rem;
+        transition: all 0.4s;
+    }
+
+    #read-more-button:hover {
+        background-color: rgb(71, 71, 71);
+        color: aliceblue;
+        cursor: none;
+    }
+}
