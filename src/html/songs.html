@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/component.css">
     <link rel="stylesheet" href="/src/css/songs.css">
     <script src="/src/js/home.js" defer></script>
+    <link rel="shortcut icon" href="/assets/willify-logo.png" type="image/x-icon">
     <title>Willify | Songs</title>
 </head>
+
 <body>
     <!-- Custom Cursor -->
     <div class="cursor outer"></div>
@@ -30,6 +33,42 @@
             <h1>Songs to Play</h1>
             <h3>Top Recommended Songs for You!</h3>
             <button id="read-more-button" class="link">Read More</button>
+        </div>
+
+        <div class="popular-songs-section">
+            <div class="popular-songs-title">
+                <h1>Popular Songs</h1>
+                <h3>SEE ALL</h3>
+            </div>
+            <div class="popular-songs-container">
+                <div class="popular-songs-card">
+                    <div class="player-card">
+                        <div class="imgBx">
+                            <img src="/assets/songs/popular-songs/image/HYBS - TipToe.png" alt="Luka Chuppi">
+                            <h3>Tip Toe</h3>
+                            <p>HYBS, 2024</p>
+                            
+                        </div>
+                        <audio src="/assets/songs/popular-songs/audio/tiptoe-hybs.m4a" controls></audio>
+                    </div>
+                    <div class="player-card">
+                        <div class="imgBx">
+                            <img src="/assets/songs/popular-songs/image/No Angels - Justin Timberlake.png" alt="Luka Chuppi">
+                            <h3>No Angels</h3>
+                            <p>Justin Timberlake, 2024</p>
+                        </div>
+                        <audio src="/assets/songs/popular-songs/audio/no-angels-justin-timberlake.m4a" controls></audio>
+                    </div>
+                    <div class="player-card">
+                        <div class="imgBx">
+                            <img src="/assets/songs/popular-songs/image/Shallow Water - Afgan.png" alt="Luka Chuppi">
+                            <h3>Shallow Water</h3>
+                            <p>Afgan, 2024</p>
+                        </div>
+                        <audio src="/assets/songs/popular-songs/audio/shallow-water-afgan.m4a" controls></audio>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -59,4 +98,5 @@
         </div>
     </footer>
 </body>
+
 </html>

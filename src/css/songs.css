@@ -48,3 +48,43 @@ body {
         cursor: none;
     }
 }
+
+/* Popular Songs */
+.popular-songs-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.player-card {
+    width: 300px;
+    background: #fff;
+    margin: 0 2rem 5rem 2rem;
+    padding: 20px 14px 8px 14px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 10px 2px 90px -11px rgba(13, 100, 76, 0.75);
+    -webkit-box-shadow: 10px 2px 90px -11px rgba(13, 100, 76, 0.75);
+    -moz-box-shadow: 10px 2px 90px -11px rgba(13, 100, 76, 0.75);
+    transition: all 0.4s;
+}
+
+.player-card:hover {
+    transform: scale(1.1);
+}
+
+.imgBx img {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 10px;
+}
+
+.player-card audio {
+    width: 100%;
+    border-radius: 6px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
