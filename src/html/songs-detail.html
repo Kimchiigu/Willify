@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/component.css">
-    <link rel="stylesheet" href="/src/css/register.css">
+    <link rel="stylesheet" href="/src/css/songs-detail.css">
     <link rel="shortcut icon" href="/assets/willify-logo.png" type="image/x-icon">
     <script src="/src/js/home.js" defer></script>
-    <script src="/src/js/register.js" defer></script>
-    <title>Willify | Register</title>
+    <title>Willify | Songs Detail</title>
 </head>
-
 <body>
     <!-- Custom Cursor -->
     <div class="cursor outer"></div>
@@ -28,43 +25,47 @@
         </ul>
     </header>
 
-    <!-- Main -->
     <main>
         <div class="hero-section">
-            <h1>Join Us!</h1>
-            <h3>Experience the feeling of Willify</h3>
+            <h1>Songs Details</h1>
+            <h3>Learn deep of your songs</h3>
             <button id="read-more-button" class="link">Read More</button>
         </div>
 
-        <div class="register-container">
-            <h1>This is Register Form</h1>
-            <form id="register-form">
-                <div>
-                    <label for="">Name</label>
-                    <input type="text" name="TxtName" id="">
+        <div class="songs-detail-container">
+            <div class="songs-detail-card">
+                <div class="left-detail">
+                    <img src="/assets/songs/music/pop/image/A Sky Full of Stars - Coldplay.jpeg" alt="">
+                    <h3>A Sky Full of Stars</h3>
+                    <p>Coldplay, 2015</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nulla eos aliquam ipsa voluptatem illo totam dolorum dolores corporis pariatur? Odio aspernatur ea delectus corporis, architecto praesentium laboriosam non! Dolorem.</p>
                 </div>
-                <div>
-                    <label for="">Email</label>
-                    <input type="text" name="TxtEmail" id="">
+                <div class="right-detail">
+                    <h1>Lyrics</h1>
+                    <p>
+                        'Cause you're a sky, 'cause you're a sky full of stars
+                        <br>I'm gonna give you my heart
+                        <br>'Cause you're a sky, 'cause you're a sky full of stars
+                        <br>'Cause you light up the path
+                        <br>I don't care, go on and tear me apart
+                        <br>I don't care if you do, ooh-ooh, ooh
+                        <br>'Cause in a sky, 'cause in a sky full of stars
+                        <br>I think I saw you
+                        <br>'Cause you're a sky, 'cause you're a sky full of stars
+                        <br>I wanna die in your arms, oh, oh-oh
+                        <br>'Cause you get lighter the more it gets dark
+                        <br>I'm gonna give you my heart, oh
+                        <br>I don't care, go on and tear me apart
+                        <br>I don't care if you do, ooh-ooh, ooh
+                        <br>'Cause in a sky, 'cause in a sky full of stars
+                        <br>I think I see you
+                        <br>I think I see you
+                        <br>'Cause you're a sky, you're a sky full of stars
+                        <br>Such a heavenly view
+                        <br>You're such a heavenly view
+                        <br>Yeah, yeah, yeah, ooh</p>
                 </div>
-                <div>
-                    <label for="">Password</label>
-                    <input type="text" name="TxtPassword" id="">
-                </div>
-                <div>
-                    <label for="">Age</label>
-                    <input type="number" name="" id="TxtAge">
-                </div>
-                <div>
-                    <label for="">Gender</label>
-                    <input type="radio" name="gender" id="female">Female
-                    <input type="radio" name="gender" id="male">Male
-                </div>
-                <div>
-                    <label for="" id="LblError">error label</label>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+            </div>
         </div>
     </main>
 
@@ -94,5 +95,4 @@
         </div>
     </footer>
 </body>
-
 </html>

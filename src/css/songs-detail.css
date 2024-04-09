@@ -1,0 +1,102 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    cursor: none;
+    background-image: url('/assets/songs-detail/songs-detail-background.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    /* max-width: max-content; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: max-content;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: aliceblue;
+    margin-bottom: 10rem;
+    margin-top: 5rem;
+
+    h1 {
+        font-size: 200px;
+        font-weight: bolder;
+        margin-bottom: -40px;
+    }
+
+    h3 {
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    #read-more-button {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        background-color: white;
+        border-radius: 10px;
+        border-style: none;
+        padding: 1rem 3rem;
+        transition: all 0.4s;
+    }
+
+    #read-more-button:hover {
+        background-color: rgb(71, 71, 71);
+        color: aliceblue;
+        cursor: none;
+    }
+}
+
+.songs-detail-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    width: 100%;
+
+    .songs-detail-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+
+        .left-detail {
+            width: 50%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+
+            img {
+                width: 50%;
+            }
+        }
+
+        .right-detail {
+            width: 50%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+}

@@ -24,7 +24,7 @@ main {
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    width: max-content;
+    width: 100%;
 }
 
 /* Hero Section */
@@ -103,7 +103,7 @@ main {
         overflow-x: auto; /* Make it horizontally scrollable */
         padding: 0; /* Add some padding to prevent clipping */
         box-sizing: border-box; /* Include padding in the width */
-        padding: 0 10px;
+        padding: 0;
 
         .popular-songs-card {
             position: relative;
@@ -111,7 +111,7 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 1200px; /* Adjust this value according to your design */
+            width: 100%; /* Adjust this value according to your design */
             max-width: 100%;
             white-space: nowrap; /* Prevent wrapping of items */
 
