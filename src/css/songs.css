@@ -1,14 +1,30 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(42, 42, 42);
     flex-direction: column;
     cursor: none;
     background-image: url('/assets/songs/background/songs-background-image.png');
     background-size: contain;
     background-repeat: no-repeat;
+    overflow-x: hidden;
+    /* max-width: max-content; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: max-content;
 }
 
 /* Hero Section */
@@ -50,41 +66,151 @@ body {
 }
 
 /* Popular Songs */
-.popular-songs-card {
+.popular-songs-section {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-}
-
-.player-card {
-    width: 300px;
-    background: #fff;
-    margin: 0 2rem 5rem 2rem;
-    padding: 20px 14px 8px 14px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 10px 2px 90px -11px rgba(13, 100, 76, 0.75);
-    -webkit-box-shadow: 10px 2px 90px -11px rgba(13, 100, 76, 0.75);
-    -moz-box-shadow: 10px 2px 90px -11px rgba(13, 100, 76, 0.75);
-    transition: all 0.4s;
-}
-
-.player-card:hover {
-    transform: scale(1.1);
-}
-
-.imgBx img {
     width: 100%;
-    height: auto;
-    border: none;
-    border-radius: 10px;
+    background-color: rgb(87, 66, 114);
+    overflow: hidden;
+
+    .rnb-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        width: 30%;
+
+        h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            font-size: 80px;
+            color: white;
+            margin-right: 5rem;
+        }
+    }
+
+    .popular-songs-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        overflow-x: auto; /* Make it horizontally scrollable */
+        padding: 0 10px; /* Add some padding to prevent clipping */
+        box-sizing: border-box; /* Include padding in the width */
+        
+
+        .popular-songs-card {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1200px; /* Adjust this value according to your design */
+            max-width: 100%;
+            white-space: nowrap; /* Prevent wrapping of items */
+
+            .pre-btn,
+            .nxt-btn {
+                border: none;
+                width: 10px;
+                height: 105%;
+                position: absolute;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: none;
+                cursor: none;
+                z-index: 8;
+                margin: 0 3% 0 3%;
+            }
+
+            .pre-btn {
+                left: 0;
+            }
+
+            .nxt-btn {
+                right: 0;
+            }
+
+            .pre-btn img,
+            .nxt-btn img {
+                opacity: 0.2;
+                width: 10vh;
+            }
+
+            .pre-btn:hover img,
+            .nxt-btn:hover img {
+                opacity: 1;
+            }
+
+            .songs-card {
+                padding: 0 5% 0 5%;
+                display: flex;
+                overflow-x: auto;
+                scroll-behavior: smooth;
+                flex-direction: row;
+                border-radius: 30px 0 0 30px;
+                width: 100%;
+                box-shadow: inset 5px 5px 16px 3px;
+
+                .player-card {
+                    display: flex;
+                    align-items: center;
+                    justify-self: center;
+                    flex-direction: column;
+                    height: auto;
+                    background: #fff;
+                    margin: 2rem 1rem 2rem 1rem;
+                    padding: 20px 14px 8px 14px;
+                    border: none;
+                    border-radius: 10px;
+                    box-shadow: 10px 2px 90px -11px rgba(13, 100, 76, 0.75);
+                    -webkit-box-shadow: 10px 2px 90px -11px rgba(13, 100, 76, 0.75);
+                    -moz-box-shadow: 10px 2px 90px -11px rgba(13, 100, 76, 0.75);
+                    transition: all 0.4s;
+                }
+
+                .player-card:hover {
+                    transform: scale(1.1);
+                }
+
+                .imgBx {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 15rem;
+
+                    h3 {
+                       margin: 1rem 0 0 0;
+                       padding: 0;
+                    }
+                }
+
+                .imgBx img {
+                    width: 100%;
+                    height: auto;
+                    border: none;
+                    border-radius: 10px;
+                }
+
+                .player-card audio {
+                    width: 100%;
+                    border-radius: 6px;
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                }
+            }            
+        }
+    }
 }
 
-.player-card audio {
-    width: 100%;
-    border-radius: 6px;
-    margin: 0;
-    padding: 0;
-    border: none;
+.songs-card::-webkit-scrollbar {
+    display: none;
 }

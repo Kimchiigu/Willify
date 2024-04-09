@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Willify | Register</title>
+    <script src="/src/js/register.js" defer></script>
 </head>
 <body>
-    
+    <h1>This is Register Form</h1>
+    <form id="register-form">
+        <div>
+            <label for="">Name</label>
+            <input type="text" name="TxtName" id="">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="text" name="TxtEmail" id="">
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="text" name="TxtPassword" id="">
+        </div>
+        <div>
+            <label for="">Age</label>
+            <input type="number" name="" id="TxtAge">
+        </div>
+        <div>
+            <label for="">Gender</label>
+            <input type="radio" name="gender" id="female">Female
+            <input type="radio" name="gender" id="male">Male
+        </div>
+        <div>
+            <label for="" id="LblError">error label</label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
