@@ -74,6 +74,8 @@ main {
     width: 100%;
     background-color: rgb(87, 66, 114);
     overflow: hidden;
+    margin: 0;
+    padding: 1rem 0;
 
     .rnb-title {
         display: flex;
@@ -99,9 +101,9 @@ main {
         align-items: center;
         width: 70%;
         overflow-x: auto; /* Make it horizontally scrollable */
-        padding: 0 10px; /* Add some padding to prevent clipping */
+        padding: 0; /* Add some padding to prevent clipping */
         box-sizing: border-box; /* Include padding in the width */
-        
+        padding: 0 10px;
 
         .popular-songs-card {
             position: relative;
@@ -184,7 +186,7 @@ main {
                     align-items: flex-start;
                     justify-content: center;
                     flex-direction: column;
-                    width: 15rem;
+                    width: 17rem;
 
                     h3 {
                        margin: 1rem 0 0 0;
