@@ -11,6 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const age = document.getElementById("TxtAge")
         const gender = document.getElementsByName('gender')
         let error = document.getElementById("LblError")
+        let isSuccess = true
 
         let getGenderValue = () => {
             for(let i = 0; i < gender.length; i++){
@@ -39,38 +40,48 @@ window.addEventListener("DOMContentLoaded", () => {
 
         if(name.value.length < 6){
             error.textContent = "Name must be more than 5 characters"
+            isSuccess = false
             return
         }
 
         if(!email.value.endsWith("@gmail.com")){
             error.textContent = "Email must end with '@gmail.com'"
+            isSuccess = false
             return
         }
 
         if(password.value.length < 6){
             error.textContent = "Password must be more than 5 characters"
+            isSuccess = false
             return
         }
 
         if(age.value < 17 || age.value > 100){
             error.textContent = "Age must be between 17-100 years old"
+            isSuccess = false
             return
         }
 
-        error.style.display = "none"
-        error.style.color = "#008000"
-        error.textContent = "Registration Success"
+        const section = document.querySelector("section"),
+              overlay = document.querySelector(".overlay"),
+              showBtn = document.querySelector(".show-modal"),
+              closeBtn = document.querySelector(".close-btn");
+
+        if(isSuccess == true){
+            // showing popup
+            showBtn.addEventListener("click", () => section.classList.add("active"));
+
+            error.style.display = "none"
+
+            overlay.addEventListener("click", () =>
+                section.classList.remove("active")
+            );
+            
+            closeBtn.addEventListener("click", () =>
+                section.classList.remove("active")
+            );
+        }        
     })
 })
 
-const section = document.querySelector("section"),
-            overlay = document.querySelector(".overlay"),
-            showBtn = document.querySelector(".show-modal"),
-            closeBtn = document.querySelector(".close-btn");
-        showBtn.addEventListener("click", () => section.classList.add("active"));
-        overlay.addEventListener("click", () =>
-            section.classList.remove("active")
-        );
-        closeBtn.addEventListener("click", () =>
-            section.classList.remove("active")
-        );
+

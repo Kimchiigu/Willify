@@ -4,12 +4,13 @@ body {
     align-items: center;
     justify-content: flex-start;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(42, 42, 42);
+    background-color: #202020;
     flex-direction: column;
     cursor: none;
     background-image: url('/assets/home/background/background-image-full.png');
     background-size: contain;
     background-repeat: no-repeat;
+    height: 100%;
 }
 
 /* Hero Section */

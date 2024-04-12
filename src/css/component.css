@@ -46,7 +46,7 @@ header {
     position: fixed;
     margin-top: 0.8rem;
     backdrop-filter: blur(10px);
-    z-index: 2;
+    z-index: 200;
 
     ul {
         a {
@@ -74,6 +74,7 @@ header {
 
 /* Footer */
 footer {
+    box-shadow: 5px 5px 16px 4px #00000056;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,9 +82,11 @@ footer {
     color: aliceblue;
     width: 100%;
     background-image: url('/assets/home/background/background-image.png');
+    background-image: url('/assets/components/footer-background-full-2.png');
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 30px 30px 0 0;
 
     .footer-container {
         display: flex;
@@ -93,11 +96,13 @@ footer {
         width: 100%;
         backdrop-filter: blur(10px);
         padding: 2rem 0;
+        border-radius: 30px 30px 0 0;
 
         .footer-above {
             display: flex;
             align-items: center;
             justify-content: center;
+            border-radius: 30px 30px 0 0;
 
             .footer-left-container {
                 width: 50%;
