@@ -3,47 +3,61 @@ window.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", (e) => {
         e.preventDefault()
+        console.log("Form submitted");
 
         const name = document.getElementById("TxtName")
         const email = document.getElementById("TxtEmail")
         const password = document.getElementById("TxtPassword")
         const age = document.getElementById("TxtAge")
-        const gender = document.querySelector('input[name="gender"]:checked')
-
+        const gender = document.getElementsByName('gender')
         let error = document.getElementById("LblError")
+
+        let getGenderValue = () => {
+            for(let i = 0; i < gender.length; i++){
+                if(gender[i].checked){
+                    return gender[i].value; 
+                }
+            }
+            return null; 
+        }
+
+        const valGender = getGenderValue()
 
         error.style.color = "#FF0000"
         error.style.display = "flex"
 
-        if(name == null){
-            error.textContent = "Missing name"
+        console.log("Name:", name.value);
+        console.log("Email:", email.value);
+        console.log("Password:", password.value);
+        console.log("Age:", age.value);
+        console.log("Gender:", valGender)
+
+        if(name.value === "" || email.value === "" || password.value === "" || age.value === "" || !valGender){
+            error.textContent = "All fields must be filled"
+            return
         }
 
-        // if(name == null || email == null || password == null || age == null || gender == null){
-        //     error.textContent = "All fields must be filled"
-        //     return
-        // }
+        if(name.value.length < 6){
+            error.textContent = "Name must be more than 5 characters"
+            return
+        }
 
-        // if(name < 3){
-        //     error.textContent = "Name must be more than 3 characters long"
-        //     return
-        // }
+        if(!email.value.endsWith("@gmail.com")){
+            error.textContent = "Email must end with '@gmail.com'"
+            return
+        }
 
-        // if(!email.endsWith("@gmail.com")){
-        //     error.textContent = "Email must end with '@gmail.com'"
-        //     return
-        // }
+        if(password.value.length < 6){
+            error.textContent = "Password must be more than 5 characters"
+            return
+        }
 
-        // if(password.textContent.trim().length < 8){
-        //     error.textContent = "Password must be more than 8 characters"
-        //     return
-        // }
+        if(age.value < 17 || age.value > 100){
+            error.textContent = "Age must be between 17-100 years old"
+            return
+        }
 
-        // if(parseInt(age.textContent.trim()) <= 17){
-        //     error.textContent = "Age must be more than 17 years old"
-        //     return
-        // }
-
+        error.style.display = "none"
         error.style.color = "#008000"
         error.textContent = "Registration Success"
     })

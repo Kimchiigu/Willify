@@ -86,6 +86,7 @@ main {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        box-shadow: 5px 5px 16px 4px #00000056;
 
         .register-background {
             width: 50%;
@@ -174,6 +175,10 @@ main {
 
 #submit-button:hover {
     background-color: rgb(40, 2, 54);
+}
+
+#LblError {
+    display: none;
 }
 
 /* Pop up */
