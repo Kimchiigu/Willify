@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/src/css/songs-detail.css">
     <link rel="shortcut icon" href="/assets/willify-logo.png" type="image/x-icon">
     <script src="/src/js/home.js" defer></script>
+    <script src="/src/js/songs-detail.js" defer></script>
     <title>Willify | Songs Detail</title>
 </head>
 
@@ -37,107 +38,1173 @@
         <div class="songs-detail-container">
             <div class="songs-detail-card">
                 <div class="left-detail">
-                    <img src="/assets/songs/music/pop/image/A Sky Full of Stars - Coldplay.jpeg" alt="" class="link">
-                    <h1>A Sky Full of Stars</h1>
-                    <h3>Coldplay, 2015</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nulla eos aliquam ipsa voluptatem
-                        illo totam dolorum dolores corporis pariatur? Odio aspernatur ea delectus corporis, architecto
-                        praesentium laboriosam non! Dolorem.</p>
-                </div>
-                <div class="right-detail">
-                    <h1>Lyrics</h1>
-                    <!-- <audio src="/assets/songs/music/pop/audio/a-sky-full-of-stars-coldplay.m4a" controls></audio> -->
-                    <p>
-                        'Cause you're a sky, 'cause you're a sky full of stars
-                        <br>I'm gonna give you my heart
-                        <br>'Cause you're a sky, 'cause you're a sky full of stars
-                        <br>'Cause you light up the path
-                        <br>I don't care, go on and tear me apart
-                        <br>I don't care if you do, ooh-ooh, ooh
-                        <br>'Cause in a sky, 'cause in a sky full of stars
-                        <br>I think I saw you
-                        <br>'Cause you're a sky, 'cause you're a sky full of stars
-                        <br>I wanna die in your arms, oh, oh-oh
-                        <br>'Cause you get lighter the more it gets dark
-                        <br>I'm gonna give you my heart, oh
-                        <br>I don't care, go on and tear me apart
-                        <br>I don't care if you do, ooh-ooh, ooh
-                        <br>'Cause in a sky, 'cause in a sky full of stars
-                        <br>I think I see you
-                        <br>I think I see you
-                        <br>'Cause you're a sky, you're a sky full of stars
-                        <br>Such a heavenly view
-                        <br>You're such a heavenly view
-                        <br>Yeah, yeah, yeah, ooh
-                    </p>
-                </div>
-            </div>
-        </div>
+                    <div class="songs-card">
+                        <div class="songs-image">
+                            <img src="/assets/songs/music/rnb/image/HYBS - TipToe.png" alt="" class="link">
+                        </div>
+                        <div class="songs-genre">
+                            <h1>Genre</h1>
+                            <div class="genre link" id="rnb">
+                                <h1>R&B</h1>
+                            </div>
+                            <div class="genre link" id="pop">
+                                <h1>Pop</h1>
+                            </div>
+                            <div class="genre link" id="kpop">
+                                <h1>K-Pop</h1>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="songs-detail-container">
-            <div class="songs-detail-card">
-                <div class="left-detail">
-                    <img src="/assets/songs/music/rnb/image/HYBS - TipToe.png" alt="" class="link">
-                    <h1>Tip Toe</h1>
-                    <h3>HYBS, 2023</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nulla eos aliquam ipsa voluptatem
-                        illo totam dolorum dolores corporis pariatur? Odio aspernatur ea delectus corporis, architecto
-                        praesentium laboriosam non! Dolorem.</p>
+                    <!-- Pop -->
+                    <div class="songs-collection hidden" id="pop-collection">
+                        <!-- 1. A Sky Full of Stars - Coldplay -->
+                        <img src="/assets/songs/music/pop/image/A Sky Full of Stars - Coldplay.png" alt="A Sky Full of Stars - Coldplay.png" 
+                            class="link"
+                            data-title="Sky Full of Stars" 
+                            data-description="Coldplay, 2014" ,
+                            data-biography="The song 'A Sky Full of Stars' by Coldplay is about love and appreciation for someone special. The lyrics describe the feeling of falling in love and the beauty of being with that person. The lyrics portray a sky full of stars, conveying the idea that the person's love is a bright and shining beacon of light in the singer's life. <br><br>
+                                            Despite any hardship or difficulties in the relationship, the singer is willing to give their heart and remain devoted to their lover. The song expresses the beauty of feeling so connected to someone that you can feel them even in darkest of times."
+                            data-lyrics="'Cause you're a sky, 'cause you're a sky full of stars
+                                        <br>I'm gonna give you my heart
+                                        <br>'Cause you're a sky, 'cause you're a sky full of stars
+                                        <br>'Cause you light up the path
+                                        <br><br>I don't care, go on and tear me apart
+                                        <br>I don't care if you do, ooh-ooh, ooh
+                                        <br>'Cause in a sky, 'cause in a sky full of stars
+                                        <br><br>I think I saw you
+                                        <br>'Cause you're a sky, 'cause you're a sky full of stars
+                                        <br>I wanna die in your arms, oh, oh-oh
+                                        <br>'Cause you get lighter the more it gets dark
+                                        <br><br>I'm gonna give you my heart, oh
+                                        <br>I don't care, go on and tear me apart
+                                        <br>I don't care if you do, ooh-ooh, ooh
+                                        <br>'Cause in a sky, 'cause in a sky full of stars
+                                        <br>I think I see you
+                                        <br>I think I see you
+                                        <br><br>'Cause you're a sky, you're a sky full of stars
+                                        <br>Such a heavenly view
+                                        <br>You're such a heavenly view
+                                        <br>Yeah, yeah, yeah, ooh">
+
+                        <!-- 2. My Universe - Coldplay X BTS -->
+                        <img src="/assets/songs/music/pop/image/My Universe - Coldplay x BTS.png" alt="My Universe - Coldplay x BTS.png" 
+                            class="link"
+                            data-title="My Universe" 
+                            data-description="Coldplay, 2021" 
+                            data-biography="'Coldplay & BTS - My Universe' is a song that celebrates the power of love and the way in which it creates a bond that transcends time and space. The song describes a connection between two lovers that is so strong, it makes them feel like their own universe. They put each other first and are willing to sacrifice everything for their partner.<br><br>
+                                            The song acknowledges the obstacles that often come with love. The lyrics mention being told that they can't be together because they come from different sides, but they refuse to let that stand in their way. They also recognize that being apart from each other is difficult, but they find comfort knowing that they will always find each other in their dreams.<br><br>
+                                            The bridge offers a sense of hope and encouragement for those who are facing difficult times in relationships. It suggests that love is the light that guides them through darkness, and that by following that light, they can overcome any challenge.<br><br>
+                                            Overall, 'My Universe' is a beautiful love song that celebrates the power of connection and the way in which it can make us feel like we are part of something greater than ourselves."
+                            data-lyrics="[Intro: Chris Martin, All]<br>
+                                        You (You), you are (You are) my universe<br>
+                                        And I (I) just want (Just want) to put you first<br>
+                                        And you (You), you are (You are) my universe, and I<br><br>
+                
+                                        [Verse 1: Chris Martin]<br>
+                                        In the night, I lie and look up at you<br>
+                                        When the morning comes, I watch you rise<br>
+                                        There's a paradise they couldn't capture<br>
+                                        That bright infinity inside your eyes<br><br>
+                
+                                        [Pre-Chorus: Jung Kook, All, Jung Kook & Chris Martin]<br>
+                                        Maeil bam nege naraga (Ga)<br>
+                                        Kkumiran geotdo ijeun chae<br>
+                                        Na useumyeo neoreul manna (Na)<br>
+                                        Never ending forever, baby<br><br>
+                
+                                        [Chorus: Chris Martin, All]<br>
+                                        You (You), you are (You are) my universe<br>
+                                        And I (I) just want (Just want) to put you first<br>
+                                        And you (You), you are (You are) my universe<br>
+                                        And you make my world light up inside<br><br>
+                
+                                        [Verse 2: V, RM, RM & Chris Martin, RM & Jimin]<br>
+                                        Eodumi naegen deo pyeonhaesseotji<br>
+                                        Gireojin geurimja sogeseo (Eyes)<br>
+                                        And they said that we can't be together<br>
+                                        Because, because we come from different sides<br>
+                                        You might also like<br><br>
+                
+                                        [Chorus: Chris Martin, All]<br>
+                                        You (You), you are (You are) my universe<br>
+                                        And I (I) just want (Just want) to put you first<br>
+                                        And you (You), you are (You are) my universe<br>
+                                        And you make my world light up inside<br><br>
+                
+                                        [Post-Chorus: All, Jin]<br>
+                                        My universe (Do-do, do-do)<br>
+                                        My universe (Do-do, do-do)<br>
+                                        My universe (Do-do, do-do)<br>
+                                        (You make my world)<br>
+                                        You make my world light up inside<br>
+                                        Make my world light up inside<br><br>
+                
+                                        [Bridge: j-hope, SUGA]<br>
+                                        Nareul balkyeojuneun geon<br>
+                                        Neoran sarangeuro su noajin byeol<br>
+                                        Nae ujuui neon<br>
+                                        Tto dareun sesangeul mandeureo juneun geol<br>
+                                        Neoneun nae byeorija naui ujunikka<br>
+                                        Jigeum i siryeondo gyeolgugen jamsinikka<br>
+                                        Neoneun eonjekkajina jigeumcheoreom balgeman binnajwo<br>
+                                        Urineun neoreul ttara i gin bameul sunoeul geoya<br><br>
+                
+                                        [Pre-Chorus: Jung Kook, Jung Kook & Jimin, Chris Martin & Jung Kook]<br>
+                                        Neowa hamkke naraga<br>
+                                        When I'm without you, I'm crazy<br>
+                                        Ja eoseo nae soneul jaba<br>
+                                        We are made of each other, baby<br>
+                                        [Chorus: Chris Martin, All]<br>
+                                        You (You), you are (You are) my universe<br>
+                                        And I (I) just want (Just want) to put you first (To put you first)<br>
+                                        And you (You), you are (You are) my universe<br>
+                                        And you make my world light up inside<br><br>
+                
+                                        [Post-Chorus: All]<br>
+                                        My universe (Do-do, do-do)<br>
+                                        You, you are (You are)<br>
+                                        My universe (Do-do, do-do)<br>
+                                        I just want (Just want)<br>
+                                        My universe<br>
+                                        You, you are (You are) my universe, and I<br>
+                                        My universe<br><br>
+                
+                                        [Outro: All]<br>
+                                        (Ayy, ayy, ayy, ayy, ayy)">
+
+                        <!-- 3. Night Changes - One Direction -->
+                        <img src="/assets/songs/music/pop/image/Night Changes - One Direction.png" alt="Night Changes - One Direction"
+                            class="link"
+                            data-title="Night Changes" 
+                            data-description="One Direction, 2014" 
+                            data-biography="'Night Changes' by One Direction delves into the poignant theme of fleeting youth, evolving relationships, and the inevitability of change. The lyrics paint a picture of a person getting ready for a night out, embodying moments of freedom and daring choices.<br><br>
+                                            As the song progresses, there is a palpable sense of the unstoppable passage of time and the ephemeral nature of dreams and desires. The reference to the moonlight illuminating the protagonist's skin hints at the magical yet transient quality of life's most memorable moments. <br><br>
+                                            The repeated message of 'even when the night changes, it will never change me and you' underscores the idea of finding stability and comfort in cherished relationships amidst life's constant flux.<br><br>
+                                            Overall, 'Night Changes' serves as a reminder to live in the present, appreciate fleeting moments, and hold onto the people who anchor us in the face of life's changes."
+                            data-lyrics="Goin' out tonight, changes into something red<br>
+                                        Her mother doesn't like that kind of dress<br>
+                                        Everything she never had she's showin' off<br>
+                                        Drivin' too fast, moon is breakin' through her hair<br>
+                                        She's headin' for somethin' that she won't forget<br>
+                                        Havin' no regrets is all that she really wants<br><br>
+                
+                                        We're only gettin' older, baby<br>
+                                        And I've been thinkin' about it lately<br>
+                                        Does it ever drive you crazy<br>
+                                        Just how fast the night changes?<br>
+                                        Everything that you've ever dreamed of<br>
+                                        Disappearing when you wake up<br>
+                                        But there's nothing to be afraid of<br>
+                                        Even when the night changes<br>
+                                        It will never change me and you<br><br>
+                
+                                        Chasing it tonight, doubts are runnin' 'round her head<br>
+                                        He's waitin', hides behind a cigarette<br>
+                                        Heart is beatin' loud and she doesn't want it to stop<br>
+                                        Movin' too fast, moon is lightin' up her skin<br>
+                                        She's fallin', doesn't even know it yet<br>
+                                        Havin' no regrets is all that she really wants<br><br>
+                
+                                        We're only gettin' older, baby<br>
+                                        And I've been thinkin' about it lately<br>
+                                        Does it ever drive you crazy<br>
+                                        Just how fast the night changes?<br>
+                                        Everything that you've ever dreamed of<br>
+                                        Disappearing when you wake up<br>
+                                        But there's nothing to be afraid of<br>
+                                        Even when the night changes<br>
+                                        It will never change me and you<br><br>
+                
+                                        Goin' out tonight, changes into something red<br>
+                                        Her mother doesn't like that kind of dress<br>
+                                        Reminds her of the missin' piece of innocence she lost<br><br>
+                
+                                        We're only gettin' older, baby<br>
+                                        And I've been thinkin' about it lately<br>
+                                        Does it ever drive you crazy<br>
+                                        Just how fast the night changes?<br>
+                                        Everything that you've ever dreamed of<br>
+                                        Disappearing when you wake up<br>
+                                        But there's nothing to be afraid of<br>
+                                        Even when the night changes<br>
+                                        It will never change, baby<br>
+                                        It will never change, baby<br>
+                                        It will never change me and you">
+
+                        <!-- 4. Payphone - Maroon 5 -->
+                        <img src="/assets/songs/music/pop/image/Payphone - Maroon 5.png" alt="Payphone - Maroon 5.png" 
+                            class="link"
+                            data-title="Payphone" data-description="Maroon 5, 2012"
+                            data-biography="This song is about someone reflecting on a broken relationship that used to be filled with dreams of a happy ending. The narrator is at a payphone trying to call home - his former partner - reminiscing about how all the plans they made for two fell apart. <br><br>
+                                            He reflects on how he gave his love out of love expecting the same in return, only for it to be thrown away. The chorus expresses his regret that he's wasted all of his change, or energy and money, on someone who no longer cares. In the post-chorus, he states how 'fairytales are full of shit' - his relationship did not turn out to be the happily ever after that he expected."
+                            data-lyrics="I'm at a payphone, trying to call home<br>
+                                        All of my change I spent on you<br>
+                                        Where have the times gone? Baby, it's all wrong<br>
+                                        Where are the plans we made for two?<br><br>
+                
+                                        Yeah, I, I know it's hard to remember<br>
+                                        The people we used to be<br>
+                                        It's even harder to picture<br>
+                                        That you're not here next to me<br><br>
+                
+                                        You say it's too late to make it<br>
+                                        But is it too late to try?<br>
+                                        And in our time that you wasted<br>
+                                        All of our bridges burned down<br><br>
+                
+                                        I've wasted my nights<br>
+                                        You turned out the lights<br>
+                                        Now, I'm paralyzed<br>
+                                        Still stuck in that time<br>
+                                        When we called it love<br>
+                                        But even the sun sets in paradise<br><br>
+                
+                                        I'm at a payphone, trying to call home<br>
+                                        All of my change I spent on you<br>
+                                        Where have the times gone? Baby, it's all wrong<br>
+                                        Where are the plans we made for two?<br><br>
+                
+                                        If 'Happy Ever After' did exist<br>
+                                        I would still be holding you like this<br>
+                                        All those fairy tales are full of shit<br>
+                                        One more fucking love song, I'll be sick (oh)<br><br>
+                
+                                        You turned your back on tomorrow<br>
+                                        'Cause you forgot yesterday<br>
+                                        I gave you my love to borrow<br>
+                                        But you just gave it away<br><br>
+                
+                                        You can't expect me to be fine<br>
+                                        I don't expect you to care<br>
+                                        I know I've said it before<br>
+                                        But all of our bridges burned down<br><br>
+                
+                                        I've wasted my nights<br>
+                                        You turned out the lights<br>
+                                        Now, I'm paralyzed<br>
+                                        Still stuck in that time<br>
+                                        When we called it love<br>
+                                        But even the sun sets in paradise<br><br>
+                
+                                        I'm at a payphone, trying to call home<br>
+                                        All of my change I spent on you (oh, oh)<br>
+                                        Where have the times gone? Baby, it's all wrong<br>
+                                        Where are the plans we made for two? (Yeah)<br><br>
+                
+                                        If 'Happy Ever After' did exist<br>
+                                        I would still be holding you like this<br>
+                                        And all those fairy tales are full of shit<br>
+                                        One more fucking love song, I'll be sick (uh)<br>
+                                        Now, I'm at a payphone<br><br>
+                
+                                        Man, fuck that shit<br>
+                                        I'll be out spending all this money while you sitting 'round<br>
+                                        Wondering why it wasn't you who came up from nothing<br>
+                                        Made it from the bottom, now, when you see me, I'm stunning<br>
+                                        And all of my cars start with a push of a button<br>
+                                        Telling me had chances I blew up or whatever you call it<br>
+                                        Switch the number to my phone, so you never could call it<br>
+                                        Don't need my name on my show, you can tell that I'm balling<br><br>
+                                        
+                                        Swish, what a shame could have got picked<br>
+                                        Had a really good game, but you missed your last shot<br>
+                                        So you talk about who you see at the top<br>
+                                        Or what you could've saw, but sad to say, it's over for<br>
+                                        Phantom pulled up, valet open doors<br>
+                                        Wished I'd go away, got what you was looking for<br>
+                                        Now, it's me who they want, so you can go<br>
+                                        And take that little piece of shit with you<br><br>
+                
+                                        I'm at a payphone, trying to call home<br>
+                                        All of my change I spent on you (woo)<br>
+                                        Where have the times gone? Baby, it's all wrong<br>
+                                        Where are the plans we made for two? (Yeah, yeah)<br><br>
+                
+                                        If 'Happy Ever After' did exist (oh, yeah)<br>
+                                        I would still be holding you like this<br>
+                                        All these fairy tales are full of shit<br>
+                                        Yeah, one more fucking love song, I'll be sick (yeah)<br>
+                                        Now, I'm at a payphone">
+
+                        <!-- 5. Talking To The Moon - Bruno Mars -->
+                        <img src="/assets/songs/music/pop/image/Talking To The Moon - Bruno Mars.png" alt="Talking To The Moon - Bruno Mars.png" 
+                            class="link" 
+                            data-title="Talking To The Moon"
+                            data-description="Bruno Mars, 2010"
+                            data-biography="The song 'Talking to the Moon' by Bruno Mars conveys the feeling of an intense longing for someone who is not physically present. The lyrics describe a sense of loneliness, as the speaker sits by themselves at night under the stars, talking to the moon in hopes that the person they miss is doing the same. <br><br>
+                                            The strong emotions conveyed by the speaker's desire to reach out to the person they miss are paralleled with the perception of madness by those around them. However, the speaker maintains hope that the person they miss is listening and responding, a belief that the speaker clings onto through conversation with the moon. <br><br>
+                                            The lyrics suggest that this is not a temporary feeling, but rather one that seems to persist each night. It appears that the speaker is willing to do almost anything to get the attention of the person they miss, even if it means talking to an inanimate object in the hopes that their words can somehow travel to the other side to reach them. <br><br>
+                                            Overall, 'Talking to the Moon' is a poignant expression of the pain of separation and the power of hope in such a situation."
+                            data-lyrics="I know you're somewhere out there<br>
+                                        Somewhere far away<br>
+                                        I want you back, I want you back<br><br>
+                
+                                        My neighbors think I'm crazy<br>
+                                        But they don't understand<br>
+                                        You're all I had, you're all I had<br><br>
+                
+                                        At night, when the stars light up my room<br>
+                                        I sit by myself<br><br>
+                
+                                        Talking to the moon<br>
+                                        Trying to get to you<br><br>
+                
+                                        In hopes you're on the other side talking to me too<br>
+                                        Or am I a fool who sits alone talking to the moon?<br>
+                                        Oh-oh<br><br>
+                
+                                        I'm feeling like I'm famous, the talk of the town<br>
+                                        They say I've gone mad<br>
+                                        Yeah, I've gone mad<br>
+                                        But they don't know what I know<br>
+                                        'Cause when the sun goes down, someone's talking back<br>
+                                        Yeah, they're talking back, oh<br><br>
+                
+                                        At night, when the stars light up my room<br>
+                                        I sit by myself<br><br>
+                
+                                        Talking to the moon<br>
+                                        Trying to get to you<br><br>
+                
+                                        In hopes you're on the other side talking to me too<br>
+                                        Or am I a fool who sits alone talking to the moon?<br><br>
+                
+                                        Ah-ah, ah-ah, ah-ah<br>
+                                        Do you ever hear me calling?<br>
+                                        (Ah-ah, ah-ah, ah-ah) oh-oh-oh, oh-oh-oh<br><br>
+                
+                                        'Cause every night, I'm talking to the moon<br>
+                                        Still trying to get to you<br><br>
+                
+                                        In hopes you're on the other side talking to me too<br>
+                                        Or am I a fool who sits alone talking to the moon?<br>
+                                        Oh-oh<br><br>
+                
+                                        I know you're somewhere out there<br>
+                                        Somewhere far away">
+                    </div>
+
+                    <!-- RNB -->
+                    <div class="songs-collection" id="rnb-collection">
+                        <!-- 1. Tip Toe - HYBS -->
+                        <img src="/assets/songs/music/rnb/image/HYBS - TipToe.png" alt="HYBS - TipToe.png" 
+                            class="link"
+                            data-title="Tip Toe" 
+                            data-description="HYBS, 2024"
+                            data-biography="The song 'Tip Toe' by HYBS seems to delve into the depths of infatuation and desire. The lyrics paint a picture of intense attraction towards someone who seems to have a magnetic effect on the singer. The idea of tip-toeing to this person signifies a cautious yet eager approach to exploring this newfound connection. <br><br> 
+                                            The chorus reflects a sense of adventure and romanticism, with the singer expressing a desire to take things to new heights and create lasting memories with this special someone. The juxtaposition of disbelief and longing in the second verse adds a layer of vulnerability to the song, showcasing the singer's struggle to come to terms with the intensity of their feelings.<br><br>
+                                            Overall, 'Tip Toe' portrays a captivating tale of love, passion, and the willingness to embrace the unknown for the chance at something truly special."
+                            data-lyrics="Take me back to the ground
+                                        <br>'Cause girl, you look fine as hell (fine as hell)
+                                        <br>I'm not easily distracted
+                                        <br>But you're acting like a magnet
+                                        <br>You pull me in
+                
+                                        <br><br>I'll be putting on a suit
+                                        <br>Be tip toeing to you
+                                        <br>If you're down for it
+                                        <br>We got nothing else to do
+                                        <br>And nothing else to lose
+                                        <br>And I'm down for this
+                                        
+                                        <br><br>If you're in the mood
+                                        <br>We can take it to the moon
+                                        <br>Just like a movie scene
+                                        <br>Table for two
+                
+                                        <br><br>No need to be fed
+                                        <br>I want you instead
+                                        <br>If you're in the mood
+                                        <br>We can tip toe to the moon
+                
+                                        <br><br>Hold up, yeah
+                                        <br>Tell my friends to pinch me hard
+                                        <br>'Cause it couldn't be real (this can't be real)
+                                        <br>Is this a dream I'm living
+                                        <br>Lord help me, please
+                                        <br>'Cause I can't get over you
+                
+                                        <br><br>I'll be putting on a suit
+                                        <br>Be tip toeing to you
+                                        <br>If you're down for it
+                                        <br>We got nothing else to do
+                                        <br>And nothing else to lose
+                                        <br>And I'm down for this
+                                        <br>Are you down for this?
+                
+                                        <br><br>If you're in the mood
+                                        <br>We can take it to the moon
+                                        <br>Just like a movie scene
+                                        <br>Table for two
+                
+                                        <br><br>No need to be fed
+                                        <br>I want you instead
+                                        <br>If you're in the mood
+                                        <br>We can tip toe to the moon
+                
+                                        <br><br>If you're in the mood
+                                        <br>We can take it to the moon (take it to the moon)
+                                        <br>Just like a movie scene
+                                        <br>Table for two (table for two)
+                
+                                        <br><br>No need to be fed
+                                        <br>I want you instead (tip toe to the moon)
+                                        <br>If you're in the mood
+                                        <br>We can tip toe to the moon
+                                        <br>Tip toe, tip toe, tip toe, tip toe, tip toe, tip toe (5x)">
+                        
+                        <!-- 2. In The Clouds - Nathan Hartono -->
+                        <img src="/assets/songs/music/rnb/image/In The Clouds - Nathan Hartono.png" alt="In The Clouds - Nathan Hartono.png" 
+                            class="link"
+                            data-title="In The Clouds" 
+                            data-description="Nathan Hartono, 2023"
+                            data-biography="On top of the whacky visuals and the groovy band on stage, Hartono brought forth a collection of deeply personal and introspective tracks that resonate with raw emotion at the In The Clouds Live show. He explained in his own quirky way, on how he confronted his vulnerabilities and transformed his pain into profound musical expression, fearlessly shedding light on his struggles and challenges.<br><br>
+                            Mental health has been front and centre of today's generation zeitgeist and only though the conversation is not new, Hartono managed to include themes such as self-love, post-trauma, and vulnerability to the unknown on his music. In other words, he transformed them into anthems for the masses to live on!"
+                            data-lyrics="Wake up in the clouds<br>
+                                        Singing louder than ever before<br>
+                                        (So why am I afraid of heights)<br>
+                                        Closer to the sun<br>
+                                        It's a one-way ticket and more<br>
+                                        (So why am I awake at night)<br><br>
+
+                                        I'm not where I wanna be and despite the view<br>
+                                        I want to let gravity pull me closer to<br>
+                                        Somewhere that I can call home<br>
+                                        Somewhere I feel less alone<br>
+                                        I think I already know<br>
+                                        It's all in my head and now I<br><br>
+
+                                        Wake up in the clouds<br>
+                                        Singing louder than ever before<br>
+                                        (So why am I afraid of heights)<br>
+                                        Closer to the sun<br>
+                                        It's a one-way ticket and more<br>
+                                        (So why am i awake at night)<br><br>
+
+                                        You're in control<br>
+                                        And I'm telling myself that<br>
+                                        You got a soul or at least something like that<br>
+                                        Wake up in the clouds singing louder than ever before<br>
+                                        People are telling me who I'll become<br>
+                                        Before it's begun<br><br>
+
+                                        So I believe anybody who comes<br>
+                                        Saying I'll be the one<br>
+                                        Wait up what are the rules?<br>
+                                        Gotta be edgier gotta be cool<br>
+                                        If I don't end any lyrics with skrrt<br><br>
+
+                                        How in the hell do I get any work<br>
+                                        I wanna feel like I'm home<br>
+                                        Somewhere I feel less alone<br>
+                                        I think I already know<br>
+                                        It's all in my head and now I<br><br>
+
+                                        Wake up in the clouds<br>
+                                        Singing louder than ever before<br>
+                                        (So why am I afraid of heights)<br>
+                                        Closer to the sun<br>
+                                        It's a one-way ticket and more<br>
+                                        (So why am I awake at night)<br><br>
+
+                                        You're in control<br>
+                                        And I'm telling myself that<br>
+                                        You got a soul or at least something like that<br>
+                                        Wake up in the clouds singing louder than ever befor<br><br>
+
+                                        Wake up in the clouds<br>
+                                        Singing louder than ever before<br>
+                                        (So why am I afraid of heights)<br>
+                                        Closer to the sun<br>
+                                        It's a one-way ticket and more<br>
+                                        (So why am I awake at night)">
+
+                        <!-- 3. No Angels - Justin Timberlake -->
+                        <img src="/assets/songs/music/rnb/image/No Angels - Justin Timberlake.png" alt="No Angels - Justin Timberlake.png" 
+                            class="link"
+                            data-title="No Angels" 
+                            data-description="Justin Timberlake, 2024" ,
+                            data-biography="The song No Angels by Justin Timberlake is an invitation to let loose and enjoy the thrill of the dance floor. From the outset, the narrator describes the quest for a special moment where one can unwind and have fun with the chosen person. The festive atmosphere intensifies with the appearance of a love interest that catches their attention.<br><br>
+                                            The lyrics highlight the physical attraction and the desire to connect with that special someone on the dance floor. The energy and ambiance suggest a space free from worries and constraints, where one can be themselves and fully embrace the present moment.<br><br>
+                                            The song encourages everyone to join in the fun and revelry, regardless of what tomorrow may bring. It's a celebration of life and passion, where rhythms and emotions merge into a shared experience.<br><br>
+                                            In summary, No Angels is an ode to freedom, fun, and the pleasure of living in the moment without worries or inhibitions. It's an invitation to let the music carry you away and fully enjoy the company of those who make us feel alive."
+                            data-lyrics="All we need is one moment, or two<br>
+                                        Just a little more time, a little unwindin'<br>
+                                        Got fun on my mind, and I've chosen you<br>
+                                        'Cause you're lookin' like gas, and I'm lookin' for mileage, ooh-uh<br><br>
+
+                                        You got that somethin' new, that sexy attitude<br>
+                                        I'd never seen it quite like that, you fit that like, ooh<br>
+                                        And I already know by just one look at you<br>
+                                        I'm gonna find out before the night's out<br><br>
+
+                                        All the good girls<br>
+                                        There's a playground that I know where we all could play<br>
+                                        Love it when it gets like this<br>
+                                        Don't stop, it's your world<br>
+                                        Go ahead and tuck all your wings away<br>
+                                        Love it when you push it like<br><br>
+
+                                        Full throttle, pilot on auto<br>
+                                        There ain't no angels here on the dance floor<br>
+                                        Forget tomorrow, move like you wanna, babe<br>
+                                        There ain't no angels here on the dance floor<br><br>
+
+                                        All we need is one moment, or two<br>
+                                        I been takin' my time, but it's all about timin'<br>
+                                        'Cause when those hips do what they really wanna do<br>
+                                        Got me losin' my mind, I ain't tryna hide it, can't hide it, no<br><br>
+
+                                        You got that somethin' new, that sexy attitude<br>
+                                        I never seen it quite like that, you fit that like, ooh<br>
+                                        And I already know by just one look at you<br>
+                                        I'm gonna find out before the night's out<br><br>
+
+                                        All we need is one moment, or two<br>
+                                        Got fun on my mind, and I've chosen you<br>
+                                        All the good girls<br>
+                                        There's a playground that I know where we all could play<br>
+                                        Love it when it gets like this<br>
+                                        Don't stop, it's your world<br>
+                                        Go ahead and tuck all your wings away<br>
+                                        Love it when you push it like<br><br>
+
+                                        Full throttle, pilot on auto<br>
+                                        There ain't no angels here on the dance floor<br>
+                                        Forget tomorrow, move like you wanna, babe<br>
+                                        There ain't no angels here on the dance floor<br><br>
+
+                                        All we need is one moment (moment, uh), or two (t-t-two)<br>
+                                        There ain't no angels here, here, here, here<br>
+                                        Got fun on my mind, and I've chosen you<br>
+                                        There ain't no angels here on the dance floor<br>
+                                        There ain't no angels here on the dance floor<br>
+                                        (Floor, floor, floor, floor, floor, floor)<br>
+                                        There ain't no angels here on the dance floor<br>
+                                        (Floor, floor, floor, floor, floor, floor)<br><br>
+
+                                        There ain't no angels here on the dance floor">
+
+                        <!-- 4. Shallow Water - Afgan -->
+                        <img src="/assets/songs/music/rnb/image/Shallow Water - Afgan.png" alt="Shallow Water - Afgan.png" 
+                            class="link"
+                            data-title="Shallow Water" 
+                            data-description="Afgan, 2024" ,
+                            data-biography="Music possesses the remarkable ability to encapsulate experiences with striking clarity, and Afgan's Shallow Water embodies this phenomenon to its core. This track unfolds as a vivid journey through the heart's intricate pathways, where each note and word carries the depth of genuine, unguarded emotion.<br><br>
+                                            In Shallow Water, Afgan steps into the role of a musical cartographer, charting the complex terrains of love. This piece, a highlight from his English album Sonder, acts as a reflective surface, revealing the intertwined dance of past shadows and present apprehensions that often accompany relationships."
+                            data-lyrics="You got your flaws and I got mine<br>
+                                        You're insecure and so am I<br>
+                                        You take me just as I am<br>
+                                        I might just love you for that<br>
+                                        Part of the problem is that<br><br>
+
+                                        Whenever it's good<br>              
+                                        It always turns into bad<br>
+                                        But we're here right now<br>
+                                        Let's stay here<br>
+                                        One foot in the ocean<br>
+                                        One foot on the sand<br>
+                                        Let's keep it like that<br><br>
+
+                                        Cause this don't feel like shallow water<br>
+                                        Shallow water shallow water<br>
+                                        Maybe we should take a sec before we<br>
+                                        Slip up and we let each other falling<br><br>
+
+                                        Cause this don't feel like shallow water baby<br>
+                                        Shallow water shallow water<br>
+                                        Maybe we should take a sec before we<br>
+                                        End up in the bottom and we're too deep<br><br>
+
+                                        I'll carry yours and you can carry mine<br>
+                                        All the baggage we can't leave behind<br>
+                                        What if we're just too hopeless<br>
+                                        And we don't even know<br>
+                                        What if we say we do and we don't<br><br>
+
+                                        Whenever it's good<br>
+                                        It always turns into bad<br>
+                                        But we're here right now<br>
+                                        Let's stay here<br>
+                                        One foot in the ocean<br>
+                                        One foot on the sand<br>
+                                        Let's keep it like that<br><br>
+
+                                        Cause this don't feel like shallow water<br>
+                                        Shallow water shallow water<br>
+                                        Maybe we should take a sec before we<br>
+                                        Slip up and we let each other falling<br><br>
+
+                                        Cause this don't feel like shallow water baby<br>
+                                        Shallow water shallow water<br>
+                                        Maybe we should take a sec before we<br>
+                                        End up in the bottom and we're too deep<br><br>
+
+                                        Shallow water, shallow water<br>
+                                        Shallow water, shallow water<br><br>
+
+                                        Shallow water, shallow water<br>
+                                        Shallow water, shallow water<br><br>
+
+                                        Whenever it's good<br>
+                                        It always turns into bad<br>
+                                        But we're here right now<br>
+                                        Let's stay here<br>
+                                        One foot in the ocean<br>
+                                        One foot on the sand<br>
+                                        Let's keep it like that">
+
+                        <!-- 5. she likes spring, I prefer winter - slchld -->
+                        <img src="/assets/songs/music/rnb/image/she likes spring, I prefer winter - slchld.png" alt="she likes spring, I prefer winter - slchld.png"
+                            class="link" 
+                            data-title="she likes spring, I prefer winter" 
+                            data-description="slchld, 2019"
+                            data-biography="The song 'she likes spring, i prefer winter' by slchld delves into the
+                                            complexities of relationships and the concept of compromise. The lyrics reflect a dynamic
+                                            where the speaker and their partner have different preferences when it comes to seasons,
+                                            with the partner favoring spring while the speaker leans towards winter.<br><br>
+                                            
+                                            Despite this disparity, the song emphasizes the importance of cherishing the present moment and the
+                                            connection shared with a loved one. The willingness to make small sacrifices, such as
+                                            calling their partner by the name of the first blooming flower, highlights the speaker's
+                                            commitment to the relationship and their partner's happiness.<br><br> 
+                                            
+                                            Ultimately, the song conveys a message of valuing the moments spent together, irrespective of individual preferences, and
+                                            finding joy in the warmth of companionship even during the coldest seasons." 
+                            data-lyrics="Stay by the fire<br>
+                                        You're giving looks like you're telling me I'm faded<br>
+                                        It's cold outside<br>
+                                        But spring's in the corner and I'm waiting<br>
+                                        On the way to work she saw the flowers blooming up<br>
+                                        Telling me how winter sucks for you<br>
+                                        What more that I can do?<br>
+                                        You know we met his year last season<br>
+                                        That's why it's so memorable for me<br>
+                                        We've worked so hard to where we be<br>
+                                        And that's enough for me right now<br><br>
+
+                                        What you've been dying to see<br>
+                                        But you be that flower for me<br>
+                                        I prefer marigold<br>
+                                        But it's the lily from the valley that you want<br>
+                                        What you've been dying to see<br>
+                                        But you be that flower for me<br>
+                                        I prefer marigold<br>
+                                        But it's the lily from the valley that you want<br>
+                                        But I'd be so glad if I'm having you (yeah-yeah)<br>
+                                        For this moment, yeah<br>
+                                        For this moment, yeah, yeah<br><br>
+
+                                        Girl, give it up, give it up, give it up, give it up, that's it<br>
+                                        Don't let it hurt, let it hurt, let it hurt<br>
+                                        Nothing left to feel<br>
+                                        Winter or spring it don't matter to me<br>
+                                        As long as you're here, yeah<br>
+                                        I can keep you warm 'til spring comes, yeah<br><br>
+
+                                        Jasmine, marigold, winter sol, yeah<br>
+                                        Whichever blooms first I might call you by that<br>
+                                        Whatever you'd like<br>
+                                        Daffodil or tulips 'cause I really don't mind<br>
+                                        If that makes you happy then I'll be happy too<br>
+                                        Jasmine, marigold, winter sol, yeah<br>
+                                        Whichever blooms first I might call you by that<br>
+                                        Whatever you'd like<br>
+                                        Daffodil or tulips 'cause I really don't mind<br><br>
+
+                                        Girl, give it up, give it up, give it up, give it up, that's it<br>
+                                        Don't let it hurt, let it hurt, let it hurt<br>
+                                        Nothing left to feel<br>
+                                        Winter or spring it don't matter to me<br>
+                                        As long as you're here, yeah<br>
+                                        I can keep you warm 'til spring comes<br><br>
+                                        
+                                        Girl, give it up, give it up, give it up, give it up, that's it<br>
+                                        Don't let it hurt, let it hurt, let it hurt<br>
+                                        Nothing left to feel<br>
+                                        Winter or spring it don't matter to me<br>
+                                        As long as you're here, yeah<br>
+                                        I can keep you warm 'til spring comes, yeah">
+                    </div>
+
+                    <!-- K-Pop -->
+                    <div class="songs-collection hidden" id="kpop-collection">
+                        <!-- 1. Broken Melodies - NCT DREAM -->
+                        <img src="/assets/songs/music/k-pop/image/Broken Melodies - NCT DREAM.png" alt="Broken Melodies - NCT DREAM.png" 
+                            class="link"
+                            data-title="Broken Melodies"
+                            data-description="NCT DREAM, 2023"
+                            data-biography="'Broken Melodies' by NCT DREAM is a song about missing someone and the pain of being separated from them. The lyrics describe the sadness and loneliness that comes with being far apart from a loved one, as well as the longing to be with them again. <br><br>
+                                            The song talks about the importance of a partner in completing our lives and the way we feel incomplete when we are missing someone we love. The lyrics mention that the distance between people creates noise and broken melodies that make it hard to be heard or to understand one another. <br><br>
+                                            The verses talk about how the absence of a loved one makes everything feel incomplete and empty. However, the chorus gives hope by acknowledging that love is a powerful and life-changing force, even in the midst of distance and loneliness. The repetition of 'Broken Melodies' throughout the song speaks to how even though life goes on, without that loved one, it feels like something essential is missing. <br><br>
+                                            The bridge provides a glimmer of hope, that despite the difficulties, it is worth it to hold on and fight for that special connection. Overall, 'Broken Melodies' illustrates the pain and longing that can come with a long-distance relationship, but it also acknowledges the power of love to overcome that distance and bring people closer together."
+                            data-lyrics="You owe me sleep<br>
+                                        밤새 얘기하며 오늘의 달과 별 너에게 보내<br>
+                                        Seoul to LA, hmm<br>
+                                        이유 별거 없지<br>
+                                        눈 감아보면 내게 제일 선명하게 떠오르네<br>
+                                        바보 같은 걸 알지 너는 저 멀리에 있는데<br><br>
+
+                                        부족해 난 너 없인 완벽할 수 없지<br>
+                                        흐트러져가는 소음일 뿐<br>
+                                        잃어버린 그 something 미완성의 우리<br>
+                                        I'll do anything to get back to you, you<br><br>
+
+                                        Life is but a dream, we got history (I just wanna)<br>
+                                        Feel the chemistry, feel you next to me (you know that I)<br>
+                                        Hate this distance<br>
+                                        'Cause I'm just left here singing<br>
+                                        Lonely harmony's broken melodies (ah)<br>
+                                        Love drunk energy, I'm in ocean deep (ah)<br>
+                                        Oh, I hate this distance and I hate singing<br><br>
+
+                                        I lay awake<br>
+                                        나의 머릿속엔 너의 목소리만 repeat<br>
+                                        멈춰지지 않지 (않지)<br>
+                                        Oh 알아 네가 있기에 아름다웠던<br>
+                                        나의 찬란한 순간 내 전부인 너 for you<br>
+                                        다시 되찾고 싶어<br>
+                                        꿈은 바래지지 않기에<br><br>
+
+                                        공허해 난 너 없인 완전할 수 없지 (oh)<br>
+                                        듣고 싶지 않은 소음일 뿐<br>
+                                        닿지 못한 그 something 미완성의 우리<br>
+                                        I'll do anything to get back to you, you<br><br>
+
+                                        Life is but a dream, we got history (I just wanna)<br>
+                                        Feel the chemistry, feel you next to me (you know that I)<br>
+                                        Hate this distance<br>
+                                        'Cause I'm just left here singing<br>
+                                        Lonely harmony's, broken melodies (ah)<br>
+                                        Love drunk energy, I'm in ocean deep (ah)<br>
+                                        Oh, I hate this distance and I hate singing<br>
+                                        Broken melodies<br><br>
+
+                                        I don't have wings, but I'm flying<br>
+                                        There's no perfect timing<br>
+                                        This could turn into something<br>
+                                        Let's turn it into something, yeah<br>
+                                        Green light, I'm ready to go<br><br>
+
+                                        달려갈게 지금 네게로 (지금 네게로)<br>
+                                        힘껏 뛰어들어 초록빛으로 (oh, yeah)<br>
+                                        I ain't scared no more (I, oh)<br>
+                                        난 너에게로 dive in, yeah<br><br>
+
+                                        Even when the skies are grey and<br>
+                                        We don't see the light of day, I<br>
+                                        Keep fighting 모두 뺏긴 채<br>
+                                        종말 앞에 내게 쏟아지는 purple rain, ah<br>
+                                        Don't need protection<br>
+                                        희망의 절벽 끝에선 네 미소 하나면 돼<br>
+                                        (I will never die)<br>
+                                        Guess I finally get back to you<br><br>
+
+                                        Life is but a dream, we got history (I just wanna)<br>
+                                        Feel the chemistry (ooh)<br>
+                                        Feel you next to me (you know that I)<br>
+                                        Hate this distance (hate this distance)<br>
+                                        'Cause I'm just left here singing (oh, singing)<br>
+                                        Lonely harmony's, broken melodies (ah)<br>
+                                        Love drunk energy, I'm in ocean deep (oh, yeah)<br>
+                                        Oh, I hate this distance and I hate singing (hate this distance)">
+
+                        <!-- 2. Cupid - FIFTY FIFTY -->
+                        <img src="/assets/songs/music/k-pop/image/Cupid - FIFTY FIFTY.png" alt="Cupid - FIFTY FIFTY.png" 
+                            class="link"
+                            data-title="Cupid"
+                            data-description="FIFTY FIFTY, 2023"
+                            data-biography="The song 'Cupid (Twin Version)'' by FIFTY FIFTY is about the pain of unrequited love and disillusionment with the concept of love itself. The lyrics convey the feeling of being a 'hopeless romantic' surrounded by happy couples, while struggling to find love oneself. The protagonist is questioning the validity of love, wondering if it is worth all the heartache and loneliness that comes with it.<br><br>
+                                            The chorus expresses frustration with Cupid, the god of love, who is supposed to bring people together but has failed the protagonist. The post-chorus reinforces this sentiment, stating that Cupid is 'so dumb' for not being able to help the protagonist find love.<br><br>
+                                            The bridge has a glimmer of hope, with the protagonist seeking someone to share their feelings with. However, they acknowledge that they may be a 'fool for love,'' implying a sense of vulnerability and fear of getting hurt again.<br><br>
+                                            Overall, the song paints a picture of someone struggling to reconcile their desire for love with the pain and disappointment that often accompanies it. It highlights the emotional toll of unrequited love and the difficulty of finding a genuine connection with someone."
+                            data-lyrics="[Intro: Aran]<br>
+                                        La, la, la, la-la-la<br>
+                                        La, la-la-la, la, la-la-la<br><br>
+
+                                        [Verse 1: Aran, All]<br>
+                                        A hopeless romantic all my life<br>
+                                        Surrounded by couples all the time<br>
+                                        I guess I should take it as a sign<br>
+                                        (Oh, why, oh, why, oh, why, oh, why?)<br><br>
+
+                                        [Pre-Chorus: Sio, All]<br>
+                                        I'm feelin' lonely (Lonely)<br>
+                                        Oh, I wish I'd find a lover that could hold me (Hold me)<br>
+                                        Now I'm crying in my room<br>
+                                        So skeptical of love (Say what you say, but I want it more)<br>
+                                        But still, I want it more, more, more<br><br>
+
+                                        [Chorus: All]<br>
+                                        I gave a second chance to Cupid<br>
+                                        But now I'm left here feelin' stupid<br>
+                                        Oh, the way he makes me feel that love isn't real<br>
+                                        Cupid is so dumb<br><br>
+
+                                        [Verse 2: Aran]<br>
+                                        I look for his arrows every day<br>
+                                        I guess he got lost or flew away<br>
+                                        Waiting around is a waste (Waste)<br>
+                                        Been counting the days since November<br>
+                                        Is loving as good as they say?<br><br>
+
+                                        [Pre-Chorus: Sio, All]<br>
+                                        Now I'm so lonely (Lonely)<br>
+                                        Oh, I wish I'd find a lover that could hold me (Hold me)<br>
+                                        Now I'm crying in my room<br>
+                                        So skeptical of love (Say what you say, but I want it more)<br>
+                                        But still, I want it more, more, more<br><br>
+
+                                        [Chorus: All]<br>
+                                        I gave a second chance to Cupid<br>
+                                        But now I'm left here feelin' stupid<br>
+                                        Oh, the way he makes me feel that love isn't real<br>
+                                        Cupid is so dumb<br><br>
+
+                                        [Post-Chorus: All]<br>
+                                        (Cupid is so dumb)<br><br>
+
+                                        [Bridge: Aran, Sio]<br>
+                                        Hopeless girl is seeking<br>
+                                        Someone who will share this feeling<br>
+                                        I'm a fool<br>
+                                        A fool for love, a fool for love<br><br>
+
+                                        [Chorus: All, Aran, Sio]<br>
+                                        I gave a second chance to Cupid<br>
+                                        But now I'm left here feelin' stupid<br>
+                                        Oh, the way he makes me feel that love isn't real<br>
+                                        Cupid is so dumb<br>
+                                        I gave a second chance to Cupid (Hopeless girl is seeking someone)<br>
+                                        But now I'm left here feelin' stupid (Who will share this feeling)<br>
+                                        Oh, the way he makes me feel that love isn't real (I'm a fool)<br>
+                                        Cupid is so dumb (A fool for love, a fool for love)">
+
+                        <!-- 3. Eve, Psyche & Bluebeard's Wife - LE SSERAFIM -->
+                        <img src="/assets/songs/music/k-pop/image/Eve, Psyche & Bluebeard's Wife - LE SSERAFIM.png" alt="Eve, Psyche & Bluebeard's Wife - LE SSERAFIM.png"
+                            class="link"
+                            data-title="Eve, Psyche & Bluebeard's Wife"
+                            data-description="LE SSERAFIM, 2023"
+                            data-biography="The song 'Eve, Psyche & The Bluebeard's wife' by LE SSERAFIM seems to be a commentary on societal expectations and the pressures to conform to them, particularly for women. The lyrics describe feeling like a mess but still being well dressed and fearless, indicating that the pressure to maintain a certain image can be overwhelming even when one is feeling overwhelmed and distressed. <br><br>
+                            The post-chorus lines 'I wish for what's forbidden' suggest a desire to break free from societal norms and explore taboo subjects. The references to Eve and 'take it on the chain' allude to the story of Adam and Eve and the punishment they received for disobeying God's commands. The chorus of 'boom, boom, boom, my heart is beating' seems to represent a sense of urgency and a desire to break free from these constraints. <br><br>
+                            Overall, the song seems to suggest that it's important to be true to oneself and not to be swayed by societal expectations."
+                            data-lyrics="[Refrain: Yunjin]<br>
+                                        I'm a mess, mess, mess, mess, mess, mess, mess<br>
+                                        I'm a mess, mess, mess, mess, mess, mess, mess<br>
+                                        I'm a mess in distress but we're still the best dressed<br>
+                                        Fearless, say yes, we don't dress to impress<br><br>
+
+                                        [Verse 1: Chaewon, Kazuha, Eunchae, Yunjin]<br>
+                                        괜찮단다 뭐를 해도<br>
+                                        거짓말인 걸 난 알아<br>
+                                        괜찮겠지 뭘 해도<br>
+                                        착한 얼굴에 네 말 잘 들을 땐<br>
+                                        괜찮지 않아 그런<br>
+                                        건 내 룰은 나만 정할래, yeah<br>
+                                        볼 거야 금지된 걸<br>
+                                        Never hold back 더 자유롭게<br><br>
+
+                                        [Chorus: Chaewon, Sakura, Eunchae]<br>
+                                        Boom, boom, boom<br>
+                                        내 심장이 뛰네<br>
+                                        Get it like boom-boom-boom<br>
+                                        Get it like boom-boom-boom (Boom-boom, now)<br>
+                                        Boom, boom, boom<br>
+                                        내 심장이 뛰네<br>
+                                        Get it like boom-boom-boom<br>
+                                        Get it like boom-boom-boom<br><br>
+
+                                        [Post-Chorus: Yunjin, Chaewon, Kazuha, Eunchae]<br>
+                                        (Push it) I wish for what's forbidden<br>
+                                        Get it like boom-boom-boom<br>
+                                        Get it like boom-boom-boom<br>
+                                        (Push it) I wish for what's forbidden<br>
+                                        Get it like boom-boom-boom<br>
+                                        Get it like boom-boom-boom<br><br>
+
+                                        [Refrain: Sakura, Eunchae, Kazuha]<br>
+                                        I'm a mess, mess, mess, mess, mess, mess, mess<br>
+                                        I'm a mess, mess, mess, mess, mess, mess, mess<br>
+                                        I'm a mess in distress but we're still the best dressed<br>
+                                        Fearless, say yes, we don't dress to impress<br><br>
+
+                                        [Verse 2: Chaewon, Yunjin, Sakura, Eunchae]<br>
+                                        웃어 웃어 더 인형이 되렴<br>
+                                        덮어 덮어 다 감정 따윈 다<br>
+                                        싫어 싫어 난 인형이 아냐<br>
+                                        찡그린대도 그것도 나야<br>
+                                        보지 말라 보고 파<br>
+                                        날 둘러싼 이 금기들, yeah<br>
+                                        그날의 이브처럼<br>
+                                        Take it on the chain, I know I like that<br><br>
+
+                                        [Chorus: Yunjin, Sakura, Eunchae]<br>
+                                        Boom, boom, boom<br>
+                                        내 심장이 뛰네<br>
+                                        Get it like boom-boom-boom<br>
+                                        Get it like boom-boom-boom (Boom-boom, now)<br>
+                                        Boom, boom, boom<br>
+                                        내 심장이 뛰네<br>
+                                        Get it like boom-boom-boom<br>
+                                        Get it like boom-boom-boom<br><br>
+
+                                        [Post-Chorus: Kazuha, Eunchae, Yunjin, Chaewon]<br>
+                                        (Push it) I wish for what's forbidden<br>
+                                        Get it like boom-boom-boom<br>
+                                        Get it like boom-boom-boom<br>
+                                        (Push it) I wish for what's forbidden<br>
+                                        Get it like boom-boom-boom<br>
+                                        Get it like boom-boom-boom (Oh-oh)<br><br>
+
+                                        [Bridge: Kazuha, Yunjin]<br>
+                                        What you waiting for?<br>
+                                        이게 타락이면 we fall, fall, fall<br>
+                                        What you looking for?<br>
+                                        원한다면 now we fall, we fall, we fall<br><br>
+
+                                        [Chorus: Eunchae, Kazuha, Sakura]<br>
+                                        Boom, boom, boom<br>
+                                        내 심장이 뛰네<br>
+                                        Get it like boom-boom-boom<br>
+                                        Get it like boom-boom-boom (Boom-boom, now)<br>
+                                        Boom, boom, boom<br>
+                                        내 심장이 뛰네<br>
+                                        Get it like boom-boom-boom<br>
+                                        Get it like boom-boom-boom<br><br>
+
+                                        [Outro: Yunjin, Sakura, Chaewon, Kazuha, (All)]<br>
+                                        Girl wanna have fun (Girl)<br>
+                                        Girl wanna have fun (Girl)<br>
+                                        Get it like boom-boom-boom<br>
+                                        Get it like boom-boom-boom<br>
+                                        Girl wanna have fun (Girl)<br>
+                                        Girl wanna have fun (Girl)<br>
+                                        Get it like boom-boom-boom<br>
+                                        Get it like boom-boom-boom">
+
+                        <!-- 4. Queencard - (G)I-DLE -->
+                        <img src="/assets/songs/music/k-pop/image/Queencard - (G)I-DLE.png" alt="Queencard - (G)I-DLE.png"
+                            class="link"
+                            data-title="Queencard"
+                            data-description="(G)I-DLE, 2023"
+                            data-biography="The song '(G)I-DLE - 퀸카 (Queencard)' celebrates self-love and confidence through its empowering lyrics. The verses speak about the singer's confidence and their sexuality, stating that they are beautiful and desirable. The chorus brings forth the idea of being a 'queencard,'' someone who is confident, sexy, and in the spotlight. The post-chorus emphasizes the idea of being a queencard repeatedly, implying that the singer believes in their self-worth and empowerment.<br><br>
+                                            The bridge presents the idea that anyone can be a queencard regardless of how they look or dress. The phrase 'Queenca-ca-card' is a play on words for 'Queen card,' implying that being a queencard is like having the ultimate card in the game of life.<br><br>
+                                            Overall, the song encourages listeners to embrace their individuality, feel confident in themselves, and be proud of who they are."
+                            data-lyrics="Hey, you 뭘 보니?<br>
+                                        내가 좀 sexy, sexy 반했니?<br>
+                                        Yeah, you 뭐 하니?<br>
+                                        너도 내 kiss, kiss 원하니?<br>
+                                        월, 화, 수, 목, 금, 토, 일, 미모가 쉬지를 않네<br>
+                                        머리부터 발끝까지 눈부셔 빛이 나네<br>
+                                        Oh 저기 언니야들 내 fashion을 따라 하네<br>
+                                        아름다운 여자의 하루는 다 아름답네<br><br>
+
+                                        이 party에 준비된 birthday cake<br>
+                                        태어나서 감사해 every day<br>
+                                        I don't need them<br>
+                                        그래 내가 봐도 난 (three, two)<br><br>
+
+                                        퀸카 I'm hot<br>
+                                        My boob and booty is hot<br>
+                                        Spotlight 날 봐<br>
+                                        I'm a star, star, star<br>
+                                        퀸카 I'm top<br>
+                                        I'm twerkin' on the runway<br>
+                                        I am a 퀸카<br>
+                                        You wanna be the 퀸카?<br><br>
+
+                                        I'm a 퀸카<br>
+                                        I'm a 퀸카<br>
+                                        I'm a, I'm a, I'm a 퀸카<br>
+                                        I'm a 퀸카 (take a photo)<br>
+                                        I'm a 퀸카<br>
+                                        I'm a 퀸카<br>
+                                        I'm a, I'm a, I'm a 퀸카<br>
+                                        I'm a 퀸카<br><br>
+
+                                        Look so cool, look so sexy like Kim Kardashian (uh)<br>
+                                        Look so cute, look so pretty like Ariana<br>
+                                        I wanna with you 뽀뽀<br>
+                                        I wanna with you 포옹<br>
+                                        자꾸 이뻐져 거울 속 너<br><br>
+
+                                        이 party에 준비된 blue champagne<br>
+                                        태어난 걸 축하해 every day<br>
+                                        I don't need them<br>
+                                        그래 내가 봐도 난 (three, two)<br><br>
+
+                                        퀸카 I'm hot<br>
+                                        My boob and booty is hot<br>
+                                        Spotlight 날 봐<br>
+                                        I'm a star, star, star<br>
+                                        퀸카 I'm top<br>
+                                        I'm twerkin' on the runway<br>
+                                        I am a 퀸카<br>
+                                        You wanna be the 퀸카?<br><br>
+
+                                        I'm a 퀸카<br>
+                                        I'm a 퀸카<br>
+                                        I'm a, I'm a, I'm a 퀸카<br>
+                                        I'm a 퀸카 (take a photo)<br>
+                                        I'm a 퀸카<br>
+                                        I'm a 퀸카<br>
+                                        I'm a, I'm a, I'm a 퀸카<br>
+                                        I'm a 퀸카<br><br>
+
+                                        아무거나 걸친 girl (girl)<br>
+                                        퀸-카-카-카<br>
+                                        마르거나 살찐 girl (girl)<br>
+                                        퀸-카-카-카<br>
+                                        자신감 넘치는 girl (girl)<br>
+                                        퀸-카-카-카<br>
+                                        I am a 퀸카<br>
+                                        You wanna be the 퀸카?">
+                            
+                        <!-- 5. Super Shy - NewJeans -->
+                        <img src="/assets/songs/music/k-pop/image/Super Shy - NewJeans.png" alt=""
+                            class="link"
+                            data-title="Super Shy"
+                            data-description="NewJeans, 2023"
+                            data-biography="The song 'Super Shy' by NewJeans (English Translation) portrays the feelings of shyness and nervousness when it comes to expressing romantic interest in someone. The lyrics showcase a longing to connect with someone, but the protagonist's shyness prevents them from taking the initiative.<br><br>
+                                            In the chorus, the repetition of 'I'm super shy, super shy' emphasizes the overwhelming bashfulness that the protagonist experiences. They express a desire to make the person they are interested in theirs, but their shyness holds them back.<br><br>
+                                            The first verse, sung by Hyein and Minji, delves into the desire to spend time with the person they like. They suggest going somewhere to talk and get to know each other better. The lyrics imply that the protagonist's feelings intensify when the person acknowledges them as their dream.<br><br>
+                                            The refrain sung by Hanni, Danielle, and Minji emphasizes the fact that the person of interest barely knows the protagonist's name. This highlights the disconnect between their emotions and the lack of familiarity the other person has with them.<br><br>
+                                            In the second verse, Haerin and Hanni express confusion over their sudden shyness despite being typically talkative. The person they like is described as special and aware of their own allure, which further intensifies the protagonist's feelings of admiration.<br><br>
+                                            Overall, 'Super Shy' conveys the internal struggle faced by the protagonist who desires to open up to their love interest but struggles with shyness and fear of rejection. It illustrates the universal experience of feeling nervous and hesitant when it comes to confessing romantic feelings."
+                            data-lyrics="I'm super shy, super shy<br>
+                                        But wait a minute while I make you mine make you mine<br>
+                                        떨리는 지금도 you're on my mind all the time<br>
+                                        I wanna tell you but I'm super shy, super shy<br><br>
+
+                                        I'm super shy, super shy<br>
+                                        But wait a minute while I make you mine make you mine<br>
+                                        떨리는 지금도 you're on my mind all the time<br>
+                                        I wanna tell you but I'm super shy, super shy<br><br>
+                                        
+                                        And I wanna go out with you, where you wanna go? (Huh?)<br>
+                                        Find a lil' spot, just sit and talk<br>
+                                        Looking pretty, follow me, 우리 둘이 나란히<br>
+                                        보이지? 내 눈이 갑자기 빛나지 when you say I'm your dream<br><br>
+
+                                        You don't even know my name, do you?<br>
+                                        You don't even know my name, do you?<br>
+                                        누구보다도<br><br>
+
+                                        I'm super shy, super shy<br>
+                                        But wait a minute while I make you mine make you mine<br>
+                                        떨리는 지금도 you're on my mind all the time<br>
+                                        I wanna tell you but I'm super shy, super shy<br><br>
+
+                                        I'm super shy, super shy<br>
+                                        But wait a minute while I make you mine, make you mine<br>
+                                        떨리는 지금도 you're on my mind all the time<br>
+                                        I wanna tell you but I'm super shy, super shy<br><br>
+
+                                        나 원래 말도 잘하고 그런데 왜 이런지?<br>
+                                        I don't like that<br>
+                                        Something odd about you, yeah, you're special and you know it<br>
+                                        You're the top, babe<br><br>
+
+                                        I'm super shy, super shy<br>
+                                        But wait a minute while I make you mine make you mine<br>
+                                        떨리는 지금도 you're on my mind all the time<br>
+                                        I wanna tell you but I'm super shy, super shy<br><br>
+
+                                        I'm super shy, super shy<br>
+                                        But wait a minute while I make you mine make you mine<br>
+                                        떨리는 지금도 you're on my mind all the time<br>
+                                        I wanna tell you but I'm super shy, super shy<br><br>
+
+                                        You don't even know my name, do you?<br>
+                                        You don't even know my name, do you?<br>
+                                        누구보다도<br><br>
+
+                                        You don't even know my name (super shy, super shy)<br>
+                                        Do you? (Make you mine, make you mine)<br>
+                                        You don't even know my name (you're on my mind all the time, I wanna tell you)<br>
+                                        Do you? (But I'm super shy, I'm super shy)">
+                    </div>
+
+                    <!-- Default Song -->
+                    <h1 id="title">Tip Toe</h1>
+                    <h3>HYBS, 2024</h3>
+                    <p>The song 'Tip Toe' by HYBS seems to delve into the depths of infatuation and desire. The lyrics
+                        paint a picture of intense attraction towards someone who seems to have a magnetic effect on the
+                        singer. The idea of tip-toeing to this person signifies a cautious yet eager approach to
+                        exploring this newfound connection. <br><br>
+                        
+                        The chorus reflects a sense of adventure and romanticism,
+                        with the singer expressing a desire to take things to new heights and create lasting memories
+                        with this special someone. The juxtaposition of disbelief and longing in the second verse adds a
+                        layer of vulnerability to the song, showcasing the singer's struggle to come to terms with the
+                        intensity of their feelings. <br><br>
+                        
+                        Overall, 'Tip Toe' portrays a captivating tale of love, passion,
+                        and the willingness to embrace the unknown for the chance at something truly special.</p>
                 </div>
                 <div class="right-detail">
                     <h1>Lyrics</h1>
-                    <!-- <audio src="/assets/songs/music/pop/audio/a-sky-full-of-stars-coldplay.m4a" controls></audio> -->
                     <p>
                         Take me back to the ground
                         <br>'Cause girl, you look fine as hell (fine as hell)
                         <br>I'm not easily distracted
                         <br>But you're acting like a magnet
                         <br>You pull me in
-                        <br>I'll be putting on a suit
+
+                        <br><br>I'll be putting on a suit
                         <br>Be tip toeing to you
                         <br>If you're down for it
                         <br>We got nothing else to do
                         <br>And nothing else to lose
                         <br>And I'm down for this
-                        <br>If you're in the mood
+                        
+                        <br><br>If you're in the mood
                         <br>We can take it to the moon
                         <br>Just like a movie scene
                         <br>Table for two
-                        <br>No need to be fed
+
+                        <br><br>No need to be fed
                         <br>I want you instead
                         <br>If you're in the mood
                         <br>We can tip toe to the moon
-                        <br>Hold up, yeah
+
+                        <br><br>Hold up, yeah
                         <br>Tell my friends to pinch me hard
                         <br>'Cause it couldn't be real (this can't be real)
                         <br>Is this a dream I'm living
                         <br>Lord help me, please
                         <br>'Cause I can't get over you
-                        <br>I'll be putting on a suit
+
+                        <br><br>I'll be putting on a suit
                         <br>Be tip toeing to you
                         <br>If you're down for it
                         <br>We got nothing else to do
                         <br>And nothing else to lose
                         <br>And I'm down for this
                         <br>Are you down for this?
-                        <br>If you're in the mood
+
+                        <br><br>If you're in the mood
                         <br>We can take it to the moon
                         <br>Just like a movie scene
                         <br>Table for two
-                        <br>No need to be fed
+
+                        <br><br>No need to be fed
                         <br>I want you instead
                         <br>If you're in the mood
                         <br>We can tip toe to the moon
-                        <br>If you're in the mood
+
+                        <br><br>If you're in the mood
                         <br>We can take it to the moon (take it to the moon)
                         <br>Just like a movie scene
                         <br>Table for two (table for two)
-                        <br>No need to be fed
+
+                        <br><br>No need to be fed
                         <br>I want you instead (tip toe to the moon)
                         <br>If you're in the mood
                         <br>We can tip toe to the moon
-                        <br>Tip toe, tip toe, tip toe, tip toe, tip toe, tip toe (5x)
-                        </p>
+                        <br>Tip toe, tip toe, tip toe, tip toe, tip toe, tip toe (5x)"
+                    </p>
                 </div>
             </div>
         </div>

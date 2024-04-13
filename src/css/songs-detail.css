@@ -9,11 +9,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     flex-direction: column;
     cursor: none;
-    background-image: url('/assets/songs-detail/songs-detail-background.png');
+    background-image: url('/assets/components/footer-background-full.png');
     background-size: contain;
     background-repeat: no-repeat;
     overflow-x: hidden;
-    /* max-width: max-content; */
     margin: 0;
     padding: 0;
     width: 100%;
@@ -32,7 +31,7 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: aliceblue;
+    color: rgb(255, 255, 243);
     margin-bottom: 10rem;
     margin-top: 5rem;
 
@@ -69,8 +68,8 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(60, 60, 60);
-    color: white;
+    background-color: rgb(70, 4, 100);
+    color: rgb(255, 255, 243);
     width: 100%;
     border-radius: 30px 30px 0 0;
     padding: 2rem;
@@ -90,15 +89,98 @@ main {
             flex-direction: column;
             padding: 0 5rem;
 
-            img {
-                width: 50%;
-                border-radius: 30px;
-                box-shadow: 5px 5px 16px 4px #00000056;
-                transition: all 0.4s;
+            .songs-card {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+
+                .songs-image {
+                    width: 50%;
+                    margin-right: 10%;
+
+                    img {
+                        width: 100%;
+                        border-radius: 30px;
+                        box-shadow: 5px 5px 16px 4px #00000056;
+                        transition: all 0.4s;
+                    }
+
+                    img:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+                .songs-genre {
+                    width: 40%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    h1 {
+                        padding: 0;
+                        margin: 0;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .genre {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        box-shadow: 5px 5px 16px 4px #00000056;
+                        transition: all 0.4s;
+                        border-radius: 10px;
+                        margin: 0.2rem 0 0.2rem 0;
+                        padding: 1rem 0;
+
+                        h1 {
+                            margin: 0;
+                            padding: 0;
+                            font-size: 30px;
+                        }
+                    }
+
+                    .genre:hover {
+                        transform: scale(1.1);
+                    }
+
+                    #rnb {
+                        background-color: rgb(7, 97, 130);
+                    }
+
+                    #pop {
+                        background-color: rgb(120, 27, 197);
+                    }
+
+                    #kpop {
+                        background-color: rgb(151, 25, 183);
+                    }
+                }
             }
 
-            img:hover {
-                transform: scale(1.1);
+            .songs-collection {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-evenly;
+                flex-direction: row;
+                margin-top: 2rem;
+
+                img {
+                    width: 19%;
+                    border-radius: 7px;
+                    transition: all 0.4s;
+                    box-shadow: 3px 3px 16px 4px #00000056;
+                }
+
+                img:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .hidden {
+                display: none;
             }
 
             h1 {
@@ -107,7 +189,7 @@ main {
             }
 
             h3 {
-                margin: 1rem 0 2rem 0;
+                margin: 1rem 0 0.5rem 0;
             }
 
             p {

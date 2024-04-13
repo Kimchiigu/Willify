@@ -3,7 +3,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", (e) => {
         e.preventDefault()
-        console.log("Form submitted");
 
         const name = document.getElementById("TxtName")
         const email = document.getElementById("TxtEmail")

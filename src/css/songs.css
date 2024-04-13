@@ -9,7 +9,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     flex-direction: column;
     cursor: none;
-    background-image: url('/assets/songs/background/songs-background-image.png');
+    background-image: url('/assets/components/footer-background-full-2.png');
     background-size: contain;
     background-repeat: no-repeat;
     overflow-x: hidden;
