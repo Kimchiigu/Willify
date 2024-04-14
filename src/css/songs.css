@@ -28,6 +28,19 @@ main {
 }
 
 /* Hero Section */
+/* parallax styling */
+.hero-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -1;
+    transition: top ease
+}
+
 .hero-section {
     display: flex;
     align-items: center;
@@ -72,7 +85,7 @@ main {
     justify-content: center;
     flex-direction: row;
     width: 100%;
-    background-color: rgb(87, 66, 114);
+    background-color: rgb(7, 97, 130);
     overflow: hidden;
     margin: 0;
     padding: 1rem 0;

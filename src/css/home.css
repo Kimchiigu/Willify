@@ -4,10 +4,10 @@ body {
     align-items: center;
     justify-content: flex-start;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #202020;
+    background-color: #5e159b;
     flex-direction: column;
     cursor: none;
-    background-image: url('/assets/home/background/background-image-full.png');
+    background-image: url('/assets/home/background/home-background-full.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 100%;
@@ -58,7 +58,7 @@ body {
     justify-content: center;
     flex-direction: column;
     color: aliceblue;
-    background-color: #202020;
+    background-color: #5e159b;
     width: 100%;
     border-radius: 30px 30px 0 0;
 
@@ -116,19 +116,276 @@ body {
             background-image: url('/assets/home/feature-card/card-1.png');
             background-repeat: no-repeat;
             background-size: cover;
+            box-shadow: 5px 5px 16px 4px #00000056;
         }
 
         #card-two {
             background-image: url('/assets/home/feature-card/card-2.png');
             background-repeat: no-repeat;
             background-size: cover;
+            box-shadow: 5px 5px 16px 4px #00000056;
         }
 
         #card-three {
             background-image: url('/assets/home/feature-card/card-3.png');
             background-repeat: no-repeat;
             background-size: cover;
+            box-shadow: 5px 5px 16px 4px #00000056;
         }
+    }
+}
+
+/* Best Seller */
+.best-seller-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    margin-bottom: 6rem;
+
+    h1 {
+        font-size: 80px;
+    }
+
+    .best-seller-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 34rem;
+        border-radius: 30px;
+        box-shadow: 5px 5px 16px 4px #00000056;
+
+        .left-container {
+            width: 50%;
+            height: 100%;
+        }
+
+        .right-container {
+            width: 50%;
+            height: 100%;
+        }
+    }
+}
+
+.songs-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(254, 255, 250);
+    width: 100%;
+
+    .songs-content {
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .songs-description {
+        width: 70%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        color: #3d0065;
+        padding: 0 0 0 2rem;
+        height: 100%;
+
+        h1 {
+            font-size: 30px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+#songs-one {
+    background-image: url('/assets/songs/music/pop/image/A\ Sky\ Full\ of\ Stars\ -\ Coldplay.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#songs-two {
+    background-image: url('/assets/songs/music/rnb/image/HYBS\ -\ TipToe.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#songs-three {
+    background-image: url('/assets/songs/music/k-pop/image/Super\ Shy\ -\ NewJeans.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#songs-four {
+    background-image: url('/assets/songs/music/rnb/image/she\ likes\ spring\,\ I\ prefer\ winter\ -\ slchld.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#songs-five {
+    background-image: url('/assets/songs/music/pop/image/Payphone\ -\ Maroon\ 5.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#songs-six {
+    background-image: url('/assets/songs/music/pop/image/Talking\ To\ The\ Moon\ -\ Bruno\ Mars.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#songs-seven {
+    background-image: url('/assets/songs/music/k-pop/image/Broken\ Melodies\ -\ NCT\ DREAM.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#songs-card-one {
+    height: 50%;
+}
+
+#songs-card-two {
+    height: 25%;
+}
+
+#songs-card-three {
+    height: 25%;
+}
+
+.songs-card-four {
+    height: 25%;
+}
+
+
+/* Marquee */
+.recommendation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 6rem;
+
+    h1 {
+        font-size: 80px;
+        color: white;
+    }
+}
+
+:root {
+    --marquee-width: 100%;
+    --marquee-height: 100%;
+    /* --marquee-elements: 12; */
+    /* defined with JavaScript */
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+}
+
+.marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    background-color: #5e159b;
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 5px 5px 16px 3px #111;
+    border-radius: 30px;
+    padding: 2rem 0;
+}
+
+.marquee:before,
+.marquee:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+
+.marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+
+.marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #111 0%, transparent 100%);
+}
+
+.marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+/* .marquee-content:hover {
+    animation-play-state: paused;
+  } */
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+    }
+}
+
+.marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    flex-shrink: 0;
+    width: var(--marquee-element-width);
+    max-height: 100%;
+    font-size: calc(var(--marquee-height)*3/4);
+    /* 5rem; */
+    white-space: nowrap;
+}
+
+.marquee-content li img {
+    width: 100%;
+    /* height: 100%; */
+    border: 2px solid #eee;
+}
+
+marquee-content li img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+
+    :root {
+        --marquee-width: 100%;
+        --marquee-height: 100%;
+        --marquee-elements-displayed: 3;
+    }
+
+    .marquee:before,
+    .marquee:after {
+        width: 10rem;
     }
 }
 
@@ -139,7 +396,7 @@ body {
     justify-content: center;
     flex-direction: column;
     color: aliceblue;
-    background-color: #202020;
+    background-color: #5e159b;
     padding-bottom: 5rem;
 
     h1 {
@@ -173,7 +430,7 @@ body {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 100%;
+                    width: 50%;
                     border-radius: 10px;
                 }
             }
@@ -184,12 +441,13 @@ body {
                 justify-content: center;
                 flex-direction: column;
                 width: 80%;
-                padding: 1rem 5rem;
+                padding: 3rem 5rem;
                 border: 0 10px 10px 0;
 
                 h3 {
                     font-size: 40px;
-                    margin-bottom: 0px;
+                    margin: 0;
+                    padding: 0;
                 }
             }
 
@@ -219,4 +477,31 @@ body {
             transform: scale(1.03);
         }
     }
+}
+
+#profile-one {
+    background-image: url('/assets/home/review-card/profile-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#profile-two {
+    background-image: url('/assets/home/review-card/profile-2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#profile-three {
+    background-image: url('/assets/home/review-card/profile-3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.review-card-left span {
+    display: block;
+    width: 100%; /* Adjust the width as needed */
+    height: 14rem; /* Adjust the height as needed */
 }

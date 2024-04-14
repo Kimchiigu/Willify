@@ -4,7 +4,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     font-family: Helvetica, sans-serif;
-    background-color: rgb(42, 42, 42);
+    background-color: #5e159b;
     flex-direction: column;
     cursor: none;
     background-image: url('/assets/about-us/background/about-us-background.png');
