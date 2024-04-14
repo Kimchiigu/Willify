@@ -7,11 +7,13 @@ body {
     background-color: #5e159b;
     flex-direction: column;
     cursor: none;
-    background-image: url('/assets/home/background/home-background-full.png');
+    /* background-image: url('/assets/home/background/home-background-full.png'); */
     background-size: contain;
     background-repeat: no-repeat;
     height: 100%;
 }
+
+
 
 /* Hero Section */
 .hero-section {
@@ -22,6 +24,19 @@ body {
     color: aliceblue;
     margin-bottom: 10rem;
     margin-top: 5rem;
+    z-index: -100;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        z-index: -100;
+        transition: top ease
+    }
 
     h1 {
         font-size: 200px;
@@ -61,10 +76,6 @@ body {
     background-color: #5e159b;
     width: 100%;
     border-radius: 30px 30px 0 0;
-
-    h1 {
-        font-size: 80px;
-    }
 
     .feature-card-container {
         display: flex;
@@ -116,21 +127,21 @@ body {
             background-image: url('/assets/home/feature-card/card-1.png');
             background-repeat: no-repeat;
             background-size: cover;
-            box-shadow: 5px 5px 16px 4px #00000056;
+            box-shadow: 5px 5px 20px 10px #00000056;
         }
 
         #card-two {
             background-image: url('/assets/home/feature-card/card-2.png');
             background-repeat: no-repeat;
             background-size: cover;
-            box-shadow: 5px 5px 16px 4px #00000056;
+            box-shadow: 5px 5px 20px 10px #00000056;
         }
 
         #card-three {
             background-image: url('/assets/home/feature-card/card-3.png');
             background-repeat: no-repeat;
             background-size: cover;
-            box-shadow: 5px 5px 16px 4px #00000056;
+            box-shadow: 5px 5px 20px 10px #00000056;
         }
     }
 }
@@ -141,13 +152,10 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #5e159b;
     width: 100%;
     color: white;
-    margin-bottom: 6rem;
-
-    h1 {
-        font-size: 80px;
-    }
+    padding-bottom: 6rem;
 
     .best-seller-content {
         display: flex;
@@ -158,12 +166,7 @@ body {
         border-radius: 30px;
         box-shadow: 5px 5px 16px 4px #00000056;
 
-        .left-container {
-            width: 50%;
-            height: 100%;
-        }
-
-        .right-container {
+        .left-container, .right-container {
             width: 50%;
             height: 100%;
         }
@@ -174,8 +177,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(254, 255, 250);
+    background-color: rgb(41, 41, 41);
     width: 100%;
+    height: 25%;
+    transition: all 0.4s;
 
     .songs-content {
         width: 30%;
@@ -183,6 +188,10 @@ body {
         align-items: center;
         justify-content: center;
         height: 100%;
+
+        h1 {
+            font-size: 80px;
+        }
     }
 
     .songs-description {
@@ -191,18 +200,41 @@ body {
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
-        color: #3d0065;
+        color: #fefdff;
         padding: 0 0 0 2rem;
         height: 100%;
+        transition: all 0.3s;
 
         h1 {
-            font-size: 30px;
+            font-size: 25px;
             padding: 0;
             margin: 0;
+            transition: all 0.4s;
         }
 
         p {
-            font-size: 20px;
+            font-size: 15px;
+            transition: all 0.4s;
+        }
+    }
+}
+
+.songs-card:hover {
+    /* height: 50%; */
+
+    .songs-content {
+        h1 {
+            font-size: 100px;
+        }
+    }
+
+    .songs-description {
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 30px;
         }
     }
 }
@@ -215,61 +247,52 @@ body {
 }
 
 #songs-two {
-    background-image: url('/assets/songs/music/rnb/image/HYBS\ -\ TipToe.png');
+    background-image: url('/assets/songs/music/pop/image/My\ Universe\ -\ Coldplay\ x\ BTS.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #songs-three {
-    background-image: url('/assets/songs/music/k-pop/image/Super\ Shy\ -\ NewJeans.png');
+    background-image: url('/assets/songs/music/rnb/image/HYBS\ -\ TipToe.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #songs-four {
-    background-image: url('/assets/songs/music/rnb/image/she\ likes\ spring\,\ I\ prefer\ winter\ -\ slchld.png');
+    background-image: url('/assets/songs/music/k-pop/image/Super\ Shy\ -\ NewJeans.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #songs-five {
-    background-image: url('/assets/songs/music/pop/image/Payphone\ -\ Maroon\ 5.png');
+    background-image: url('/assets/songs/music/rnb/image/she\ likes\ spring\,\ I\ prefer\ winter\ -\ slchld.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #songs-six {
-    background-image: url('/assets/songs/music/pop/image/Talking\ To\ The\ Moon\ -\ Bruno\ Mars.png');
+    background-image: url('/assets/songs/music/pop/image/Payphone\ -\ Maroon\ 5.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #songs-seven {
-    background-image: url('/assets/songs/music/k-pop/image/Broken\ Melodies\ -\ NCT\ DREAM.png');
+    background-image: url('/assets/songs/music/pop/image/Talking\ To\ The\ Moon\ -\ Bruno\ Mars.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#songs-card-one {
-    height: 50%;
-}
-
-#songs-card-two {
-    height: 25%;
-}
-
-#songs-card-three {
-    height: 25%;
-}
-
-.songs-card-four {
-    height: 25%;
+#songs-eight {
+    background-image: url('/assets/songs/music/k-pop/image/Broken\ Melodies\ -\ NCT\ DREAM.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -280,9 +303,9 @@ body {
     justify-content: center;
     flex-direction: column;
     margin-bottom: 6rem;
+    background-color: #5e159b;
 
     h1 {
-        font-size: 80px;
         color: white;
     }
 }
@@ -398,78 +421,46 @@ marquee-content li img:hover {
     color: aliceblue;
     background-color: #5e159b;
     padding-bottom: 5rem;
-
-    h1 {
-        font-size: 80px;
-    }
+    height: 100%;
 
     .review-card-container {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: row;
+        height: 100%;
 
         .review-card {
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             margin-bottom: 0.5rem;
-            border-radius: 10px;
-            width: 90%;
-            transition: all 0.4s;
-            /* margin: 0 5rem 1rem 5rem;
-            padding: 1rem 5rem; */
+            border-radius: 30px;
+            width: 30%;
+            height: 100%;
+            transition: all 0.4s;   
+            margin: 0 1rem;
+            padding: 2rem 3rem;
+            position: relative;
 
-            .review-card-left {
+            img {
+                width: 50%;
+                height: 50%;
+                border-radius: 50%;
+            }
+
+            h1 {
+                font-size: 50px;
+                padding: 0;
+                margin: 2rem 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 20%;
-
-                img {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 50%;
-                    border-radius: 10px;
-                }
             }
 
-            .review-card-right {
-                display: flex;
-                align-items: flex-start;
-                justify-content: center;
-                flex-direction: column;
-                width: 80%;
-                padding: 3rem 5rem;
-                border: 0 10px 10px 0;
-
-                h3 {
-                    font-size: 40px;
-                    margin: 0;
-                    padding: 0;
-                }
-            }
-
-            #review-one {
-                background-image: url('/assets/home/review-card/review-background-1.png');
-                background-size: cover;
-                background-repeat: no-repeat;
-                border-radius: 0px 10px 10px 0;
-            }
-
-            #review-two {
-                background-image: url('/assets/home/review-card/review-background-2.png');
-                background-size: cover;
-                background-repeat: no-repeat;
-                border-radius: 0px 10px 10px 0;
-            }
-
-            #review-three {
-                background-image: url('/assets/home/review-card/review-background-3.png');
-                background-size: cover;
-                background-repeat: no-repeat;
-                border-radius: 0px 10px 10px 0;
+            p {
+                font-size: 20px;
             }
         }
 
@@ -479,29 +470,42 @@ marquee-content li img:hover {
     }
 }
 
-#profile-one {
-    background-image: url('/assets/home/review-card/profile-1.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.heading-one {
+    font-size: 80px;
+    box-shadow: inset 10px 10px 16px 10px #00000056;
+    border-radius: 30px;
+    padding: 2rem 3rem;
 }
 
-#profile-two {
-    background-image: url('/assets/home/review-card/profile-2.png');
-    background-position: center;
-    background-repeat: no-repeat;
+#review-one {
+    background-image: url('/assets/home/review-card/review-background-1.png');
     background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
 }
 
-#profile-three {
-    background-image: url('/assets/home/review-card/profile-3.png');
-    background-position: center;
-    background-repeat: no-repeat;
+#review-two {
+    background-image: url('/assets/home/review-card/review-background-2.png');
     background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
 }
 
-.review-card-left span {
-    display: block;
-    width: 100%; /* Adjust the width as needed */
-    height: 14rem; /* Adjust the height as needed */
+#review-three {
+    background-image: url('/assets/home/review-card/review-background-3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+}
+
+.overlay {
+    position: absolute;
+    background-color: #00000023; /* Darken the overlay */
+    opacity: 0.5; /* Adjust the opacity as needed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 30px; /* Ensure the overlay follows the card's border radius */
 }

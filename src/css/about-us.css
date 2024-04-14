@@ -7,10 +7,10 @@ body {
     background-color: #5e159b;
     flex-direction: column;
     cursor: none;
-    background-image: url('/assets/about-us/background/about-us-background.png');
-    width: 100%;
-    background-size: contain;
+    background-image: url('/assets/about-us/background/about-us-background.jpg');
+    background-size: auto;
     background-repeat: no-repeat;
+    width: 100%;
     color: white;
 }
 
@@ -57,6 +57,79 @@ body {
     }
 }
 
+/* Biography Section */
+.biography-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #5e159b;
+    padding: 7rem 0 5rem 0;
+
+    .biography-left {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 50%;
+        padding: 1rem 3rem;
+
+        h1 {
+            font-size: 80px;
+            margin: 0 0 1rem 0;
+            padding: 2rem 0 1rem 0;
+        }
+
+        .biography-description {
+            box-shadow: inset 5px 5px 16px 4px #000;
+            border-radius: 30px;
+            padding: 1rem 2rem;
+
+            p {
+                font-size: 23px;
+            }
+        }
+    }
+
+    .biography-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+
+        .uvp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(7px);
+            width: 80%;
+            transition: all 0.4s;
+            height: 8rem;
+            margin-bottom: 0.6rem;
+            box-shadow: 5px 5px 16px 4px #00000055;
+        }
+
+        .uvp:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+#uvp-one {
+    background-color: #8c00ff69;
+    border-radius: 30px 30px 0 0;
+}
+
+#uvp-two {
+    background-color: #00ffff69;
+}
+
+#uvp-three {
+    background-color: #e100ff69;
+    border-radius: 0 0 30px 30px;
+}
+
 /* History Section */
 .history-section {
     display: flex;
@@ -64,6 +137,7 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    background-color: #5e159b;
 
     h1 {
         font-size: 80px;
@@ -167,6 +241,10 @@ body {
         background-color: rgb(63, 63, 63);
         position: relative;
         border-radius: 6px;
+
+        h2 {
+            font-size: 50px;
+        }
     }
 
     /* Media queries - Responsive timeline on screens less than 600px wide */

@@ -17,10 +17,10 @@ songsContainers.forEach((item, i) => {
 })
 
 // Parallax
-const bg = document.getElementById('bg')
+// const bg = document.getElementById('bg')
 
-window.addEventListener('scroll', () => {
-    let value = window.scrollY
+// window.addEventListener('scroll', () => {
+//     let value = window.scrollY
 
-    bg.style.top = value * 0.7 + 'px'
-})
+//     bg.style.top = value * 0.7 + 'px'
+// })
