@@ -47,6 +47,7 @@ header {
     margin-top: 0.8rem;
     backdrop-filter: blur(10px);
     z-index: 200;
+    color: #000;
 
     ul {
         a {
@@ -70,6 +71,10 @@ header {
             background-color: rgba(244, 244, 244, 0.812);
         }
     }
+}
+
+@media (max-width: 1100px) {
+
 }
 
 /* Footer */
