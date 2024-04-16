@@ -1,0 +1,5 @@
+{
+    "version": 2,
+    "name": "your-project-name",
+    "root": "../src/html/index.html"
+}
