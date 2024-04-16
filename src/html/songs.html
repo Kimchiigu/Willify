@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/component.css">
     <link rel="stylesheet" href="/src/css/songs.css">
+    <link rel="shortcut icon" href="/assets/willify-logo.png" type="image/x-icon">
     <script src="/src/js/home.js" defer></script>
     <script src="/src/js/songs.js" defer></script>
-    <link rel="shortcut icon" href="/assets/willify-logo.png" type="image/x-icon">
+    <script src="/src/js/component.js" defer></script>
     <title>Willify | Songs</title>
 </head>
 
@@ -18,15 +19,34 @@
     <div class="cursor inner"></div>
 
     <!-- Header -->
-    <header>
-        <ul>
-            <li class="link"><a href="/src/html/index.html">Home</a></li>
-            <li class="link"><a href="/src/html/about-us.html">About Us</a></li>
-            <li class="link"><a href="/src/html/songs.html">Songs</a></li>
-            <li class="link"><a href="/src/html/songs-detail.html">Songs Detail</a></li>
-            <li class="link"><a href="/src/html/register.html">Register</a></li>
-        </ul>
-    </header>
+    <!-- Header -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home" id="navbar__logo">Willify</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links link" id="home-page">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about-us.html" class="navbar__links link" id="about-page">About Us</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="songs.html" class="navbar__links link" id="services-page">Songs</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="songs-detail.html" class="navbar__links link" id="services-page">Songs Detail</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="register.html" class="button link" id="sign-up">Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Main Body -->
     <main>
@@ -40,7 +60,7 @@
         <!-- R&B Genre -->
         <div class="popular-songs-section">
             <div class="rnb-title">
-                <h1>R&B<br>Genre</h1>
+                <h1 id="rnb-text">R&B<br>Genre</h1>
             </div>
             <div class="popular-songs-container">
                 <div class="popular-songs-card">
@@ -96,7 +116,7 @@
         <!-- Pop Genre -->
         <div class="popular-songs-section" style="background-color: rgb(120, 27, 197);">
             <div class="rnb-title">
-                <h1>Pop<br>Genre</h1>
+                <h1 id="pop-text">Pop<br>Genre</h1>
             </div>
             <div class="popular-songs-container">
                 <div class="popular-songs-card">
@@ -152,7 +172,7 @@
         <!-- K-Pop Genre -->
         <div class="popular-songs-section" style="background-color: rgb(151, 25, 183);">
             <div class="rnb-title">
-                <h1>K-Pop<br>Genre</h1>
+                <h1 id="kpop-text">K-Pop<br>Genre</h1>
             </div>
             <div class="popular-songs-container">
                 <div class="popular-songs-card">
@@ -211,9 +231,11 @@
         <div class="footer-container">
             <div class="footer-above">
                 <div class="footer-left-container">
-                    <img src="/assets/willify-logo.png" alt="footer-logo" style="width: 50%;">
+                    <img src="/assets/willify-logo.png" alt="footer-logo">
                     <p>&copy Willify 2024</p>
                 </div>
+            </div>
+            <div class="footer-below">
                 <div class="footer-right-container">
                     <p class="link"><a href="/src/html/index.html">Home</a></p>
                     <p class="link"><a href="/src/html/about-us.html">About Us</a></p>

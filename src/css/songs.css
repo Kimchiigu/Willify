@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     cursor: none;
     background-image: url('/assets/components/footer-background-full-2.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
     /* max-width: max-content; */
@@ -51,14 +51,20 @@ main {
     margin-top: 5rem;
 
     h1 {
-        font-size: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15vmin;
         font-weight: bolder;
-        margin-bottom: -40px;
+        padding: 8rem 2rem 0rem 2rem;
+        margin: 0;
     }
 
     h3 {
-        font-size: 50px;
+        font-size: 5vmin;
         font-weight: bold;
+        padding: 1rem 2rem 3rem 2rem;
+        margin: 0;
     }
 
     #read-more-button {
@@ -69,6 +75,10 @@ main {
         border-style: none;
         padding: 1rem 3rem;
         transition: all 0.4s;
+
+        @media screen and (max-width: 768px) {
+            font-size: 4vmin;
+        }
     }
 
     #read-more-button:hover {
@@ -90,6 +100,10 @@ main {
     margin: 0;
     padding: 1rem 0;
 
+    @media screen and (max-width: 1100px) {
+        flex-direction: column;
+    }
+
     .rnb-title {
         display: flex;
         align-items: center;
@@ -97,14 +111,22 @@ main {
         flex-direction: row;
         width: 30%;
 
+        @media screen and (max-width: 1100px) {
+            width: 100%;
+        }
+
         h1 {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: row;
-            font-size: 80px;
+            font-size: 10vmin;
             color: white;
             margin-right: 5rem;
+
+            @media screen and (max-width: 1100px) {
+                margin-right: 0;
+            }
         }
     }
 
@@ -117,6 +139,11 @@ main {
         padding: 0; /* Add some padding to prevent clipping */
         box-sizing: border-box; /* Include padding in the width */
         padding: 0;
+
+        @media screen and (max-width: 1100px) {
+            width: 100%;
+            border-radius: 30px;
+        }
 
         .popular-songs-card {
             position: relative;
@@ -229,3 +256,4 @@ main {
 .songs-card::-webkit-scrollbar {
     display: none;
 }
+
