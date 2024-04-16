@@ -52,117 +52,150 @@ const songSix = document.getElementById('songs-card-six')
 const songSeven = document.getElementById('songs-card-seven')
 const songEight = document.getElementById('songs-card-eight')
 
-songOne.addEventListener('mouseover', () => {
-  songOne.style.height = 50 + "%"
-  songTwo.style.height = 50/3 + "%"
-  songThree.style.height = 50/3 + "%"
-  songFour.style.height = 50/3 + "%"
-})
+if(window.innerWidth >= 1000){
+  songOne.addEventListener('mouseover', () => {
+    songOne.style.height = 50 + "%"
+    songTwo.style.height = 50/3 + "%"
+    songThree.style.height = 50/3 + "%"
+    songFour.style.height = 50/3 + "%"
+  })
+  
+  songOne.addEventListener('mouseleave', () => {
+    songOne.style.height = 25 + "%"
+    songTwo.style.height = 25 + "%"
+    songThree.style.height = 25 + "%"
+    songFour.style.height = 25 + "%"
+  })
+  
+  songTwo.addEventListener('mouseover', (e) => {
+    songOne.style.height = 50/3 + "%"
+    songTwo.style.height = 50 + "%"
+    songThree.style.height = 50/3 + "%"
+    songFour.style.height = 50/3 + "%"
+  })
+  
+  songTwo.addEventListener('mouseleave', () => {
+    songOne.style.height = 25 + "%"
+    songTwo.style.height = 25 + "%"
+    songThree.style.height = 25 + "%"
+    songFour.style.height = 25 + "%"
+  })
+  
+  songThree.addEventListener('mouseover', (e) => {
+    songOne.style.height = 50/3 + "%"
+    songTwo.style.height = 50/3 + "%"
+    songThree.style.height = 50 + "%"
+    songFour.style.height = 50/3 + "%"
+  })
+  
+  songThree.addEventListener('mouseleave', () => {
+    songOne.style.height = 25 + "%"
+    songTwo.style.height = 25 + "%"
+    songThree.style.height = 25 + "%"
+    songFour.style.height = 25 + "%"
+  })
+  
+  songFour.addEventListener('mouseover', (e) => {
+    songOne.style.height = 50/3 + "%"
+    songTwo.style.height = 50/3 + "%"
+    songThree.style.height = 50/3 + "%"
+    songFour.style.height = 50 + "%"
+  })
+  
+  songFour.addEventListener('mouseleave', () => {
+    songOne.style.height = 25 + "%"
+    songTwo.style.height = 25 + "%"
+    songThree.style.height = 25 + "%"
+    songFour.style.height = 25 + "%"
+  })
+  
+  songFive.addEventListener('mouseover', () => {
+    songFive.style.height = 50 + "%"
+    songSix.style.height = 50/3 + "%"
+    songSeven.style.height = 50/3 + "%"
+    songEight.style.height = 50/3 + "%"
+  })
+  
+  songFive.addEventListener('mouseleave', () => {
+    songFive.style.height = 25 + "%"
+    songSix.style.height = 25 + "%"
+    songSeven.style.height = 25 + "%"
+    songEight.style.height = 25 + "%"
+  })
+  
+  songSix.addEventListener('mouseover', () => {
+    songFive.style.height = 50/3 + "%"
+    songSix.style.height = 50 + "%"
+    songSeven.style.height = 50/3 + "%"
+    songEight.style.height = 50/3 + "%"
+  })
+  
+  songSix.addEventListener('mouseleave', () => {
+    songFive.style.height = 25 + "%"
+    songSix.style.height = 25 + "%"
+    songSeven.style.height = 25 + "%"
+    songEight.style.height = 25 + "%"
+  })
+  
+  songSeven.addEventListener('mouseover', () => {
+    songFive.style.height = 50/3 + "%"
+    songSix.style.height = 50/3 + "%"
+    songSeven.style.height = 50 + "%"
+    songEight.style.height = 50/3 + "%"
+  })
+  
+  songSeven.addEventListener('mouseleave', () => {
+    songFive.style.height = 25 + "%"
+    songSix.style.height = 25 + "%"
+    songSeven.style.height = 25 + "%"
+    songEight.style.height = 25 + "%"
+  })
+  
+  songEight.addEventListener('mouseover', () => {
+    songFive.style.height = 50/3 + "%"
+    songSix.style.height = 50/3 + "%"
+    songSeven.style.height = 50/3 + "%"
+    songEight.style.height = 50 + "%"
+  })
+  
+  songEight.addEventListener('mouseleave', () => {
+    songFive.style.height = 25 + "%"
+    songSix.style.height = 25 + "%"
+    songSeven.style.height = 25 + "%"
+    songEight.style.height = 25 + "%"
+  })
+} else {
+  const songs = document.querySelectorAll('.player-card');
 
-songOne.addEventListener('mouseleave', () => {
-  songOne.style.height = 25 + "%"
-  songTwo.style.height = 25 + "%"
-  songThree.style.height = 25 + "%"
-  songFour.style.height = 25 + "%"
-})
+  // Define the mouseover event handler
+  const handleMouseOver = (index) => {
+      // Calculate the height for the hovered song
+      const hoveredHeight = 25 + "%";
+      // Calculate the height for the other songs
+      const otherHeight = 75/7 + "%";
 
-songTwo.addEventListener('mouseover', (e) => {
-  songOne.style.height = 50/3 + "%"
-  songTwo.style.height = 50 + "%"
-  songThree.style.height = 50/3 + "%"
-  songFour.style.height = 50/3 + "%"
-})
+      // Set the height for each song based on the index
+      songs.forEach((song, i) => {
+          song.style.height = i === index ? hoveredHeight : otherHeight;
+      });
+  }
 
-songTwo.addEventListener('mouseleave', () => {
-  songOne.style.height = 25 + "%"
-  songTwo.style.height = 25 + "%"
-  songThree.style.height = 25 + "%"
-  songFour.style.height = 25 + "%"
-})
+  // Define the mouseleave event handler
+  const handleMouseLeave = () => {
+      // Reset the height for all songs
+      songs.forEach((song) => {
+          song.style.height = 12.5 + "%";
+      });
+  }
 
-songThree.addEventListener('mouseover', (e) => {
-  songOne.style.height = 50/3 + "%"
-  songTwo.style.height = 50/3 + "%"
-  songThree.style.height = 50 + "%"
-  songFour.style.height = 50/3 + "%"
-})
+  // Attach event listeners to each song
+  songs.forEach((song, index) => {
+      song.addEventListener('mouseover', () => handleMouseOver(index));
+      song.addEventListener('mouseleave', handleMouseLeave);
+  });
+}
 
-songThree.addEventListener('mouseleave', () => {
-  songOne.style.height = 25 + "%"
-  songTwo.style.height = 25 + "%"
-  songThree.style.height = 25 + "%"
-  songFour.style.height = 25 + "%"
-})
 
-songFour.addEventListener('mouseover', (e) => {
-  songOne.style.height = 50/3 + "%"
-  songTwo.style.height = 50/3 + "%"
-  songThree.style.height = 50/3 + "%"
-  songFour.style.height = 50 + "%"
-})
-
-songFour.addEventListener('mouseleave', () => {
-  songOne.style.height = 25 + "%"
-  songTwo.style.height = 25 + "%"
-  songThree.style.height = 25 + "%"
-  songFour.style.height = 25 + "%"
-})
-
-songFive.addEventListener('mouseover', () => {
-  songFive.style.height = 50 + "%"
-  songSix.style.height = 50/3 + "%"
-  songSeven.style.height = 50/3 + "%"
-  songEight.style.height = 50/3 + "%"
-})
-
-songFive.addEventListener('mouseleave', () => {
-  songFive.style.height = 25 + "%"
-  songSix.style.height = 25 + "%"
-  songSeven.style.height = 25 + "%"
-  songEight.style.height = 25 + "%"
-})
-
-songSix.addEventListener('mouseover', () => {
-  songFive.style.height = 50/3 + "%"
-  songSix.style.height = 50 + "%"
-  songSeven.style.height = 50/3 + "%"
-  songEight.style.height = 50/3 + "%"
-})
-
-songSix.addEventListener('mouseleave', () => {
-  songFive.style.height = 25 + "%"
-  songSix.style.height = 25 + "%"
-  songSeven.style.height = 25 + "%"
-  songEight.style.height = 25 + "%"
-})
-
-songSeven.addEventListener('mouseover', () => {
-  songFive.style.height = 50/3 + "%"
-  songSix.style.height = 50/3 + "%"
-  songSeven.style.height = 50 + "%"
-  songEight.style.height = 50/3 + "%"
-})
-
-songSeven.addEventListener('mouseleave', () => {
-  songFive.style.height = 25 + "%"
-  songSix.style.height = 25 + "%"
-  songSeven.style.height = 25 + "%"
-  songEight.style.height = 25 + "%"
-})
-
-songEight.addEventListener('mouseover', () => {
-  songFive.style.height = 50/3 + "%"
-  songSix.style.height = 50/3 + "%"
-  songSeven.style.height = 50/3 + "%"
-  songEight.style.height = 50 + "%"
-})
-
-songEight.addEventListener('mouseleave', () => {
-  songFive.style.height = 25 + "%"
-  songSix.style.height = 25 + "%"
-  songSeven.style.height = 25 + "%"
-  songEight.style.height = 25 + "%"
-})
 
 // Overlay
 const overlay = document.querySelector('.overlay')

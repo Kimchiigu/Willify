@@ -39,14 +39,22 @@ body {
     }
 
     h1 {
-        font-size: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 15vmin;
         font-weight: bolder;
-        margin-bottom: -40px;
+        padding: 8rem 2rem 0rem 2rem;
+        margin: 0;
     }
 
     h3 {
-        font-size: 50px;
+        font-size: 5vmin;
         font-weight: bold;
+        text-align: center;
+        padding: 1rem 2rem 3rem 2rem;
+        margin: 0;
     }
 
     #read-more-button {
@@ -57,6 +65,10 @@ body {
         border-style: none;
         padding: 1rem 3rem;
         transition: all 0.4s;
+
+        @media screen and (max-width: 768px) {
+            font-size: 4vmin;
+        }
     }
 
     #read-more-button:hover {
@@ -76,11 +88,16 @@ body {
     background-color: #5e159b;
     width: 100%;
     border-radius: 30px 30px 0 0;
+    padding: 2rem 0;
 
     .feature-card-container {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+        }
 
         .feature-card {
             display: flex;
@@ -88,6 +105,7 @@ body {
             justify-content: center;
             flex-direction: column;
             background-color: rgb(126, 126, 126);
+            background-position: center;
             width: 23%;
             height: 25rem;
             margin-right: 2rem;
@@ -98,20 +116,40 @@ body {
             filter: grayscale(0%);
             backdrop-filter: blur(7px);
 
+            @media screen and (max-width: 1000px) {
+                width: 80%;
+                height: 15rem;
+                margin: 0 0 0.8rem 0;
+                padding: 0;
+            }
+
             h1 {
                 font-size: 50px;
                 text-align: center;
+
+                @media screen and (max-width: 1000px) {
+                    font-size: 7vmin;
+                }
             }
 
             p {
                 display: none;
                 font-size: 40px;
                 text-align: center;
+
+                @media screen and (max-width: 1000px) {
+                    font-size: 5vmin;
+                }
             }
         }
 
+        
+
         .feature-card:hover {
-            transform: scale(1.1);
+            @media screen and (max-width > 1000px) {
+                transform: scale(1.05);
+            }
+
             filter: grayscale(100%);
 
             h1 {
@@ -166,9 +204,18 @@ body {
         border-radius: 30px;
         box-shadow: 5px 5px 16px 4px #00000056;
 
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+            height: 100%;
+        }
+
         .left-container, .right-container {
             width: 50%;
             height: 100%;
+
+            @media screen and (max-width: 1000px) {
+                width: 100%;
+            }
         }
     }
 }
@@ -182,6 +229,10 @@ body {
     height: 25%;
     transition: all 0.4s;
 
+    @media screen and (max-width: 1000px) {
+        height: 100%;
+    }
+
     .songs-content {
         width: 30%;
         display: flex;
@@ -191,6 +242,10 @@ body {
 
         h1 {
             font-size: 80px;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 10vmin;
+            }
         }
     }
 
@@ -205,16 +260,28 @@ body {
         height: 100%;
         transition: all 0.3s;
 
+        @media screen and (max-width: 1000px) {
+            padding-left: 1rem;
+        }
+
         h1 {
             font-size: 25px;
             padding: 0;
             margin: 0;
             transition: all 0.4s;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 3.5vmin;
+            }
         }
 
         p {
             font-size: 15px;
             transition: all 0.4s;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 2.25vmin;
+            }
         }
     }
 }
@@ -225,16 +292,28 @@ body {
     .songs-content {
         h1 {
             font-size: 100px;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 12vmin;
+            }
         }
     }
 
     .songs-description {
         h1 {
             font-size: 40px;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 5vmin;
+            }
         }
 
         p {
             font-size: 30px;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 3vmin;
+            }
         }
     }
 }
@@ -430,6 +509,10 @@ marquee-content li img:hover {
         flex-direction: row;
         height: 100%;
 
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+        }
+
         .review-card {
             display: flex;
             align-items: center;
@@ -444,10 +527,21 @@ marquee-content li img:hover {
             padding: 2rem 3rem;
             position: relative;
 
+            @media screen and (max-width: 1000px) {
+                width: 80%;
+                margin-bottom: 2rem;
+                padding: 1rem;
+            }
+
             img {
                 width: 50%;
                 height: 50%;
                 border-radius: 50%;
+
+                @media screen and (max-width: 1000px) {
+                    width: 12rem;
+                    height: auto;
+                }
             }
 
             h1 {
@@ -457,10 +551,21 @@ marquee-content li img:hover {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                text-align: center;
+
+                @media screen and (max-width: 1000px) {
+                    width: 90%;
+                    font-size: 10vmin;
+                }
             }
 
             p {
                 font-size: 20px;
+
+                @media screen and (max-width: 1000px) {
+                    width: 80%;
+                    font-size: 5vmin;
+                }
             }
         }
 
@@ -475,6 +580,10 @@ marquee-content li img:hover {
     box-shadow: inset 10px 10px 16px 10px #00000056;
     border-radius: 30px;
     padding: 2rem 3rem;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 7vmin;
+    }
 }
 
 #review-one {

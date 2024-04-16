@@ -186,6 +186,15 @@ header {
     background: linear-gradient(to right, #fcb845,#fd1d1d,#833ab4);
     color: #fff;
     transition: all 0.3s ease;
+    margin-left: 2rem;
+
+    @media screen and (max-width: 960px) {
+        margin-left: 0;
+    }
+}
+
+.button:hover {
+    transform: scale(1.1);
 }
 
 .navbar__links:hover {
@@ -368,11 +377,16 @@ footer {
                     border-radius: 30px;
                     padding: 0.5rem 2rem;
                     transition: all 0.4s;
+
+                    @media screen and (max-width: 1000px) {
+                        padding: 0 1rem;   
+                    }
                 }
 
                 p:hover {
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                     background-color: rgba(244, 244, 244, 0.812);
+                    padding: 1rem 2rem;
                     color: #202020;
                 }
 
@@ -397,15 +411,7 @@ footer {
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
-
-            
-        }
-
-        p {
-            border-radius: 30px;
-            padding: 0;
-            transition: all 0.4s;
+            flex-direction: column; 
         }
     }
 }
