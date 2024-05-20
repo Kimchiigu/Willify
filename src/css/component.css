@@ -7,6 +7,10 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 9999;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 .outer {
@@ -14,24 +18,40 @@
     width: 75px;
     border: 2px solid #f7f7f770;
     z-index: 9999;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 .inner {
     background: #e7e7e782;
     transition: 250ms ease-out;
     z-index: 9999;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 .cursor.hover {
     transform: translate(-50%, -50%) scale(2);
     transition: transform 250ms ease-in-out;
     z-index: 9999;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 .inner.hover {
     background: #f7f7f7;
     mix-blend-mode: color-burn;
     z-index: 9999;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 /* Navbar */
