@@ -1,3 +1,16 @@
+// Smooth href
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+document.getElementById('read-more-button').addEventListener('click', (event) => {
+    event.preventDefault();
+    scrollToSection('read-more-section');
+});
+
 // Destination Slider
 const songsContainers = [...document.querySelectorAll('.songs-card')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
@@ -49,3 +62,5 @@ window.addEventListener('resize', changeText);
 
 //     bg.style.top = value * 0.7 + 'px'
 // })
+
+// Songs

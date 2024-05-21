@@ -7,11 +7,10 @@ body {
     background-color: #5e159b;
     flex-direction: column;
     cursor: none;
-    background-image: url('/assets/about-us/background/about-us-background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
+    background-image:  repeating-radial-gradient(circle at 0 0, transparent 0, #150011 100px), repeating-linear-gradient(#6d1e98, rgba(174, 86, 86, 0.72));
+    background-color: #150011;
     color: white;
+    padding: 0;
 }
 
 main {
@@ -36,6 +35,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    
 
     h1 {
         display: flex;
@@ -71,7 +71,7 @@ main {
     }
 
     #read-more-button:hover {
-        background-color: rgb(71, 71, 71);
+        background-color: #280b46;
         color: aliceblue;
         cursor: none;
     }
@@ -98,12 +98,14 @@ main {
         justify-content: flex-start;
         flex-direction: column;
         width: 50%;
-        padding: 1rem 3rem;
+        padding: 1rem 0rem;
+        margin-left: 3rem;
 
         @media screen and (max-width: 1300px) {
             align-items: center;
             width: 90%;
             margin-bottom: 2rem;
+            margin-left: 0rem;
         }
 
         h1 {
@@ -357,7 +359,7 @@ main {
 	display: flex;
     justify-content: center;
 	align-items: flex-end;
-	padding: 2rem 1rem;
+	padding: 2rem 0rem;
 	position: relative;
 	transition: 0.5s all ease-in-out;
     box-shadow: 5px 5px 20px #000;

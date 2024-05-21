@@ -59,4 +59,17 @@ window.addEventListener('DOMContentLoaded', () => {
         three.style.height = 25 + '%'
         four.style.height = 25 + '%'
     })
+
+    // Smooth href
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    document.getElementById('read-more-button').addEventListener('click', (event) => {
+        event.preventDefault();
+        scrollToSection('read-more-section');
+    });
 })
